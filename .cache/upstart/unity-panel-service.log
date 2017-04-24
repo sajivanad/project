@@ -1,2 +1,28 @@
 
 (unity-panel-service:999): GLib-CRITICAL **: Source ID 709 was not found when attempting to remove it
+
+(unity-panel-service:999): GLib-CRITICAL **: Source ID 1397 was not found when attempting to remove it
+
+(unity-panel-service:999): GLib-CRITICAL **: Source ID 1894 was not found when attempting to remove it
+
+(unity-panel-service:999): GLib-CRITICAL **: Source ID 1917 was not found when attempting to remove it
+
+(unity-panel-service:999): GLib-CRITICAL **: Source ID 2323 was not found when attempting to remove it
+
+(unity-panel-service:999): Indicator-Appmenu-CRITICAL **: window_menu_model_new: assertion 'BAMF_IS_APPLICATION(app)' failed
+
+(unity-panel-service:999): Indicator-Appmenu-CRITICAL **: track_menus: assertion 'IS_WINDOW_MENU(menus)' failed
+
+(unity-panel-service:999): GLib-CRITICAL **: Source ID 2346 was not found when attempting to remove it
+
+(unity-panel-service:999): Indicator-Appmenu-CRITICAL **: window_menu_model_new: assertion 'BAMF_IS_APPLICATION(app)' failed
+
+(unity-panel-service:999): Indicator-Appmenu-CRITICAL **: track_menus: assertion 'IS_WINDOW_MENU(menus)' failed
+
+(unity-panel-service:999): GLib-CRITICAL **: Source ID 2513 was not found when attempting to remove it
+
+(unity-panel-service:999): Indicator-Appmenu-CRITICAL **: window_menu_model_new: assertion 'BAMF_IS_APPLICATION(app)' failed
+
+(unity-panel-service:999): Indicator-Appmenu-CRITICAL **: track_menus: assertion 'IS_WINDOW_MENU(menus)' failed
+
+(unity-panel-service:999): GLib-CRITICAL **: Source ID 2889 was not found when attempting to remove it

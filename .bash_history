@@ -563,3 +563,11 @@ sh calc.sh
 gedit calc.sh
 sh calc.sh
 gedit calc.sh
+su
+sudo su
+su
+deepthi
+su
+sudo su
+su
+sudo su
