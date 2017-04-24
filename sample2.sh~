@@ -1,0 +1,3 @@
+echo"hello world"
+n=5
+echo"number is $n"

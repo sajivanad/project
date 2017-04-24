@@ -1,0 +1,2 @@
+total 0
+-rw-rw-r-- 1 deepthi deepthi 0 Jan 23 21:24 text1.txt

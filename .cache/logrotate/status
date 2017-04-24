@@ -1,0 +1,23 @@
+logrotate state -- version 2
+"/home/deepthi/.cache/upstart/unity7.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/hud.log" 2016-8-28-20:50:13
+"/home/deepthi/.cache/upstart/ssh-agent.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/indicator-printers.log" 2016-7-8-16:6:15
+"/home/deepthi/.cache/upstart/indicator-bluetooth.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/at-spi2-registryd.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/indicator-application.log" 2016-8-28-20:50:13
+"/home/deepthi/.cache/upstart/gnome-keyring-gpg.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/upstart-event-bridge.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/update-notifier-release.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/session-migration.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/unity-panel-service.log" 2017-4-24-19:3:49
+"/home/deepthi/.cache/upstart/gnome-keyring.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/*.log" 2016-11-23-19:0:0
+"/home/deepthi/.cache/upstart/indicator-session.log" 2016-12-14-19:18:23
+"/home/deepthi/.cache/upstart/gnome-keyring-ssh.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/unity-panel-service-lockscreen.log" 2017-1-23-20:4:53
+"/home/deepthi/.cache/upstart/dbus.log" 2017-4-24-19:3:49
+"/home/deepthi/.cache/upstart/indicator-sound.log" 2016-12-14-19:18:23
+"/home/deepthi/.cache/upstart/indicator-keyboard.log" 2016-8-28-20:50:13
+"/home/deepthi/.cache/upstart/window-stack-bridge.log" 2017-4-24-18:51:37
+"/home/deepthi/.cache/upstart/unity-settings-daemon.log" 2017-4-24-18:51:37

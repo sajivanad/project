@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="iso-8859-1" ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head id="ctl00_ctl00_Head1"><meta http-equiv="content-type" content="text/html; charset=iso-8859-1" /><title>
+	Shell Script to make a menu driven calculator using case - Unix / Linux / Ubuntu Examples and Tutorials
+</title><link type="text/css" rel="Stylesheet" href="../Styles/mystyle.css" /><link href="../Styles/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet" type="text/css" /><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script><!--[if lt IE 7]><style>
+#leftcolumn{margin-left:0}
+</style><![endif]--><!--Google Analytics--><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33438645-1']);
+  _gaq.push(['_setDomainName', 'dailyfreecode.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><meta name="description" content="Code, Example for Shell Script to make a menu driven calculator using case in Unix / Linux" /><meta name="keywords" content="Shell Script to make a menu driven calculator using case, Unix / Linux, Example, Code, Tutorial, Syntax, Homework Help" /></head><body style="margin: 0px;"><form name="aspnetForm" method="post" action="/code/shell-script-menu-driven-calculator-1694.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm"><div><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" /><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTAzMDczNzAwN2Rk5pmfBAekplul9zftVY43O4NXP42WDxs9bSIaNeimbvA=" /></div><script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]></script><script src="/WebResource.axd?d=orYlLCz42x9BHUmFVkXhG4T4PV48Ym5kSh7hpj79_nQmWr4verBLpjIqyv7e-rCz7BJ3H2nlcsJ83oVUvsUzz7f7I0LumyBsHt6PYl3_6ss1&amp;t=636065005291802409" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]></script><div id="LoginContainer"><div id="LoginSection"><div id="ctl00_ctl00_LoginLogout_pnlRandomLink" align="left" class="Login-Leftbar"></div><div align="right" class="Login-Rightbar"><div align="right" class="label">Welcome&nbsp;-&nbsp;<span id="ctl00_ctl00_LoginLogout_lblName">Guest! &nbsp;&nbsp;&nbsp;</span><span id="ctl00_ctl00_LoginLogout_divLogin"><a id="ctl00_ctl00_LoginLogout_hlLogin" href="/UserLogin.aspx">Login</a> &nbsp;/&nbsp;
+                    <a id="ctl00_ctl00_LoginLogout_hlRegister" href="/CreateUser.aspx">Register Now</a></span><span>
+                    &nbsp;|&nbsp;
+                    <a href="http://www.facebook.com/DailyFreeCode" id="ctl00_ctl00_LoginLogout_hlFB" target="_blank" rel="nofollow"><img border="0" src='/Images/facebook10x10.jpg' alt="Facebook" /></a>&nbsp;
+                    <a href="http://twitter.com/dailyfreecode" id="ctl00_ctl00_LoginLogout_hlTW" target="_blank" rel="nofollow"><img border="0" src='/Images/twitter10x10.png' alt="Twitter"/></a></span></div></div></div></div><div id="MainContainer"><div id="HeaderSection"><table width="100%"><tr><td><img src='/Images/Logo/logo.gif' alt="Logo" />&nbsp;
+                </td><td><div id="ctl00_ctl00_CH_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ctl00_ctl00_CH_btnSearch&#39;)"><div align="right" style="padding-right: 30px"><span><b>Search:</b><input name="ctl00$ctl00$CH$txtSearchBox" type="text" size="40" id="ctl00_ctl00_CH_txtSearchBox" /><input type="submit" name="ctl00$ctl00$CH$btnSearch" value="Search" id="ctl00_ctl00_CH_btnSearch" /></span></div></div></td></tr><tr><td colspan="2"><div id="ctl00_ctl00_CH_pnlMenuBar"><div id="cat-navbar" style="text-align:center"><div id="nav-menu"><ul><li><a id="hlHome" href="../Default.aspx">Home</a></li><li><a id="hlArticles" href="../Article.aspx">Articles</a></li><li><a id="hlForum" href="../Message-Board/Forum.aspx">Forum</a></li><li><a id="hlInterviewFAQ" href="../Interview.aspx">Interview FAQ</a></li><li><a id="hlActivityLog" href="../Activitylog/ShowAll.aspx">Activities</a></li><li><a id="hlNews" href="../News.aspx">News</a></li><li><a id="hlVideos" href="../Videos.aspx">Videos</a></li><li><a id="hlPoll" href="../Poll.aspx">Poll</a></li><li><a id="hlHotLinks" href="../HotLinks.aspx">Links</a></li><li><a id="hlGeek" href="../MembersPicView.aspx">People</a></li><li><a id="hlGroups" href="../Community.aspx">Groups</a></li></ul></div></div></div></td></tr><tr><td colspan="2"><div id="ctl00_ctl00_CH_pnlAdvertise"><table width="100%" align="center"><tr><td><div data-type="ad" data-publisher="lqm.go4sharepoint.site" data-zone="ron"  data-tags="Java%2cSQL%2cC++%2c.Net%2cAsp.Net%2cWCF%2cWPF%2cVS.Net" data-format="728x90"></div></td><td style="background-color:#FFC"><div class="fb-like-box" data-href="https://www.facebook.com/DailyFreeCode" data-width="220" data-height="90" data-show-faces="false" data-stream="false" data-header="false"></div></td></tr><tr><td style="background-color:#F0F0F0;height:3px;" colspan="2"></td></tr></table><div id="fb-root"></div><script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script></div></td></tr></table></div><div id="ContentSection"><div id="InContentSectionMain"><div id="InContentSectionContent"><div  class="fl wContentPart rbdr"><div class="mr10"><div class="w100p"><!-- QUESTION (starts) --><table border="0" width="100%"><tr><td align="center" colspan="2"><table width="100%" align="center"><tr><td align="left" width="480px"><h1 id="ctl00_ctl00_CC_CM_h1PageTitle" class="h1PageTitle">Unix / Linux / Ubuntu Articles</h1></td><td align="right" valign="middle"><a href="/MyWork/ArticleModeSelection.aspx" id="ctl00_ctl00_CC_CM_hlSubmitArticle" title="Post New Article" class="SubmitLink">Submit Article</a></td></tr></table></td></tr><tr><td align="center" colspan="2"><center><table><tr><td align="left"><div id="ctl00_ctl00_CC_CM_valSummary" class="ErrorMsg" style="color:Red;display:none;"></div></td></tr></table></center></td></tr></table><table border="0" cellpadding="0" width="100%"><tr><td align="left"><span id="ctl00_ctl00_CC_CM_lblBreadCrum" class="DHLlnk"><a class='DHLlnk' href='/Default.aspx' title='Home'>Home</a>&nbsp;&raquo;&nbsp;<a class='DHLlnk' href='/Article.aspx' title='View All Articles'>Articles</a>&nbsp;&raquo;&nbsp;<a class='DHLlnk' href='/Tutorial/Easy-Unix__Linux__Ubuntu-40.aspx' title='All Unix / Linux / Ubuntu Articles'>Unix / Linux / Ubuntu</a>&nbsp;&raquo;&nbsp;<a class='DHLlnk' href='/Tutorial_Simple_Unix__Linux__Ubuntu-40/Homework-Help-258.aspx' title='All Homework Help Articles' >Homework Help</a></span></td><td align="right"><a href="http://feeds.feedburner.com/syntaxexamplearticlesRssFeed" id="ctl00_ctl00_CC_CM_hlRSSFeed" title="Subscribe RSS Feed" class="DHLlnk" target="_blank">RSS Feeds</a></td></tr></table><div class="HdrRow tl txt140"><h1 id="ctl00_ctl00_CC_CM_h1SyntaxTitle">Shell Script to make a menu driven calculator using case</h1></div><div class="HdrRowLevel2 tl"><b>Posted By: </b><span id="ctl00_ctl00_CC_CM_lblPostedBy"><a href='/User/samuel-evans-1754.aspx'>Samuel Evans</a></span>
+        
+       
+        
+        &nbsp;&nbsp;&nbsp;        
+        <b>Category: </b><span id="ctl00_ctl00_CC_CM_lblLanguage"><a href='/Tutorial/Easy-Unix__Linux__Ubuntu-40.aspx' title='All Unix / Linux / Ubuntu Articles'>Unix / Linux / Ubuntu</a></span>
+        &nbsp;&nbsp;&nbsp;
+        <span id="ctl00_ctl00_CC_CM_lblPageViews"><b>Views:</b> 65875</span></div><div style="text-align:left;"></div><div class="MyBox PR3" style="text-align:left;"><div id="ctl00_ctl00_CC_CM_pnlAdvertisement1"></div><div style="text-align:left;"><h3 id="ctl00_ctl00_CC_CM_lblDescription" class="DisableText"><p>Write a Shell Script to make a menu driven calculator using case.<br /></p></h3></div><div id="ctl00_ctl00_CC_CM_pnlAdvertisement2"></div><div id="ctl00_ctl00_CC_CM_pnlExample" style="text-align:left;"><h2 id="ctl00_ctl00_CC_CM_h3Example" style="display: inline;" class="h1Syntax">Code for Shell Script to make a menu driven calculator using case in Unix / Linux / Ubuntu</h2><span id="ctl00_ctl00_CC_CM_lblExample"><pre class="csharpcode">
+clear
+sum=0
+i=<span class="str">"y"</span>
+
+echo <span class="str">" Enter one no."</span>
+read n1
+echo <span class="str">"Enter second no."</span>
+read n2
+<span class="kwrd">while</span> [ $i = <span class="str">"y"</span> ]
+<span class="kwrd">do</span>
+echo <span class="str">"1.Addition"</span>
+echo <span class="str">"2.Subtraction"</span>
+echo <span class="str">"3.Multiplication"</span>
+echo <span class="str">"4.Division"</span>
+echo <span class="str">"Enter your choice"</span>
+read ch
+<span class="kwrd">case</span> $ch <span class="kwrd">in</span>
+    1)sum=`expr $n1 + $n2`
+     echo <span class="str">"Sum ="</span>$sum;;
+        2)sum=`expr $n1 - $n2`
+     echo <span class="str">"Sub = "</span>$sum;;
+    3)sum=`expr $n1 \* $n2`
+     echo <span class="str">"Mul = "</span>$sum;;
+    4)sum=`expr $n1 / $n2`
+     echo <span class="str">"Div = "</span>$sum;;
+    *)echo <span class="str">"Invalid choice"</span>;;
+esac
+echo <span class="str">"Do u want to continue ?"</span>
+read i
+<span class="kwrd">if</span> [ $i != <span class="str">"y"</span> ]
+then
+    exit
+fi
+done    
+
+
+
+
+
+
+
+
+
+
+OUTPUT
+***********
+[04mca58@LINTEL 04mca58]$ sh calculator.sh
+Enter any no.
+121
+ Enter one no.
+ 21
+ Enter second no.
+ 58
+ 1.Addition
+ 2.Subtraction
+ 3.Multiplication
+ 4.Division
+ Enter your choice
+ 1
+ Sum =79
+ Do u want to <span class="kwrd">continue</span> ?
+ y
+ 1.Addition
+ 2.Subtraction
+ 3.Multiplication
+ 4.Division
+ Enter your choice
+ 2
+ Sub = -37
+ Do u want to <span class="kwrd">continue</span> ?
+ y
+ 1.Addition
+ 2.Subtraction
+ 3.Multiplication
+ 4.Division
+ Enter your choice
+ 3
+ Mul = 1218
+ Do u want to <span class="kwrd">continue</span> ?
+ y
+ 1.Addition
+ 2.Subtraction
+ 3.Multiplication
+ 4.Division
+ Enter your choice
+ 4
+ Div = 0
+ Do u want to <span class="kwrd">continue</span> ?
+ n
+</pre></span></div><div id="ctl00_ctl00_CC_CM_pnlAdvertisement3" style="text-align:left;"><table width="98%"><tr><td align="left"><div data-type="ad" data-publisher="lqm.go4sharepoint.site" data-zone="ron" data-tags="Java%2cSQL%2cC++%2c.Net%2cAsp.Net%2cWCF%2cWPF%2cVS.Net"  data-format="300x250"></div></td><td>&nbsp;&nbsp;</td><td align="right"><div data-type="ad" data-publisher="lqm.go4sharepoint.site" data-zone="ron" data-tags="Java%2cSQL%2cC++%2c.Net%2cAsp.Net%2cWCF%2cWPF%2cVS.Net"  data-format="300x250"></div></td></tr></table></div></div><div class="MyBox"><script type="text/javascript">        var switchTo5x = true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">
+    stLight.options({ publisher: '295d0d5f-f570-4440-b445-29f1c40604ff' });</script>
+
+
+
+
+
+Share:&nbsp;
+<span  class='st_facebook_hcount' displayText='Facebook'></span><span  class='st_twitter_hcount' displayText='Tweet'></span><span  class='st_sharethis_hcount' displayText='ShareThis'></span><span  class='st_fblike_hcount' ></span><span  class='st_plusone_hcount' ></span></div><br /><div class="graybox"><div  class="fl w49p rbdr txt120"><div id="ctl00_ctl00_CC_CM_pnlPreviousLink" class="mr10"><b>Previous Post: </b><br /><div class="w100p lh22"><a href="/Code/shell-script-delete-zero-sized-file-1693.aspx" id="ctl00_ctl00_CC_CM_linkPrevious">Shell Script to delete the zero sized file using if and for</a><br /></div></div><div class="cb">&nbsp;</div></div><div class="fr w49p txt120"><div id="ctl00_ctl00_CC_CM_pnlNextLink" class="mr10"><b>Next Post: </b><br /><div class="w100p lh22"><a href="/Code/shell-script-display-users-names-users-1695.aspx" id="ctl00_ctl00_CC_CM_linkNext">Shell script to display all users names, or users names of a particular group, or name of users who </a><br /></div></div><div class="cb">&nbsp;</div></div><div class="cb">&nbsp;</div></div><br /><div class="MyBox RowHighlight"><div id="ctl00_ctl00_CC_CM_SearchMessage1_pnlFindMore">
+                    Didn't find what you were looking for?
+                    Find more on <a href="/MySearchResult.aspx?q=shell+script+make+menu+driven+calculator+case&stype=all" id="ctl00_ctl00_CC_CM_SearchMessage1_lnkFindMore">Shell Script to make a menu driven calculator using case</a>
+                    Or get <a href="/Updates.aspx?q=Shell+Script+to+make+a+menu+driven+calculator+using+case" id="ctl00_ctl00_CC_CM_SearchMessage1_lnkFindMoreUpdates">search suggestion and latest updates</a>.
+                </div></div><br /><div class="HdrRowLevel2 tl" style="text-align:left;"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><!--Author Pic and Basic Details--><td valign="top" align="left"><table border="0" style="height: 155px"><tr><td id="ctl00_ctl00_CC_CM_pnlUserImage" align="center"><a href='/User/samuel-evans-1754.aspx'><img border='0' align='bottom' height='153px' alt='Samuel Evans' width='153px' src='http://www.gravatar.com/avatar/75b591d4dc0c82cbc3fc43e5905c10e8?s=150&d=identicon&r=PG'></img></a></td></tr></table></td><td align="left" valign="top" width="100%"><table border="0" align="left" style="width: 100%; vertical-align: top"><tr><td id="ctl00_ctl00_CC_CM_pnlUserDetails" width="100%"><a href='/User/samuel-evans-1754.aspx'>Samuel Evans</a> author of Shell Script to make a menu driven calculator using case is from London, <a href='/Country/United-Kingdom.aspx'>United Kingdom</a>. </td></tr><tr><td>
+                                &nbsp;
+                            </td></tr><tr><td id="ctl00_ctl00_CC_CM_pnlViewAllSubmission" align="left"><a href='/ShowAllArticles/Programmer1754.aspx'><b>View All Articles</b></a></td></tr></table></td></tr></table></div><br /><div id="ctl00_ctl00_CC_CM_pnlRelatedTopics" class="BoxStyle GreenBox" style="text-align:left;"><h3 id="ctl00_ctl00_CC_CM_lblRelatedTopics" class="h3AnsCnt">Related Articles and Code:</h3><br /><ul id="ctl00_ctl00_CC_CM_listviewReleatedLinks" style="list-style-type:square;font-weight:bold;"><li><a href="/Code/menu-driven-shell-script-copy-file-1618.aspx">Write a menu driven shell script for Copy a file, Remove a file, Move a file</a></li><li><a href="/Code/prepare-menu-driven-calculator-1518.aspx">Prepare a menu driven calculator</a></li><li><a href="/Code/shell-script-create-menu-driven-hard-1703.aspx">Shell Script to create a Menu Driven program : Hard Link, Soft Link, Counting each of the links for a specific link and Display the soft-links </a></li><li><a href="/Code/menu-driven-display-message-user-name-1523.aspx">Write a menu driven program to display message, user name, terminal name, login date and time</a></li><li><a href="/Code/menu-driven-telephone-directory-160.aspx">Menu driven telephone directory program</a></li><li><a href="/Code/menu-driven-bank-application-project-164.aspx">Menu driven Bank Application Project</a></li><li><a href="/Code/shell-script-convert-file-lower-case-1616.aspx">Write a shell script to convert a file to lower case or upper case as specified by user.</a></li><li><a href="/Code/menu-driven-shell-which-options-change-1587.aspx">menu driven shell program which have the options change the term, change the prompt and user list of unix system.   </a></li><li><a href="/Code/shell-script-sort-given-numbers-1640.aspx">Write a shell script to sort the given numbers in descending order using Bubble sort </a></li><li><a href="/Code/shell-script-find-sum-given-numbers-1696.aspx">Shell Script to find out the sum of the given numbers using command line argument</a></li><li><a href="/Code/shell-script-delete-zero-sized-file-1693.aspx">Shell Script to delete the zero sized file using if and for</a></li><li><a href="/Code/decision-making-branching-statement-2667.aspx">Decision Making and Branching using if statement , switch statement , conditional operator and goto </a></li><li><a href="/Code/decision-making-looping-while-statement-2668.aspx">Decision Making and Looping using while statement , do while loop , for statement  </a></li><li><a href="/Code/shell-script-which-receive-number-1613.aspx">Write a shell script, which will receive any number of filenames 	as arguments .The shell script should check whether such files already exist. </a></li><li><a href="/Code/shell-script-which-receive-number-1595.aspx">Write a shell script, which will receive any number of filenames as arguments .The shell script should check whether such files already exist. </a></li><li><a href="/Code/shell-script-find-sum-digits-number-1599.aspx">Write a shell script to find sum of digits of a number    </a></li><li><a href="/Code/shell-script-prints-names-sub-1588.aspx">Shell script that prints names of all sub-directories present in the current directory</a></li><li><a href="/Code/shell-scripts-which-works-similar-unix-1591.aspx">Write a shell scripts which works similar to the Unix commands Head Tail</a></li><li><a href="/Code/shell-script-prints-names-sub-1531.aspx">Shell script that prints names of all sub-directories present in the current directory</a></li><li><a href="/Code/show-example-driving-class-1283.aspx">Program to show an example of Driving and using a Class</a></li></ul></div><div>
+        &nbsp;
+    </div><div id="ctl00_ctl00_CC_CM_pnlDisplayCategoryArticles" class="BoxStyle GreenBox" style="text-align:left;"><h3 id="ctl00_ctl00_CC_CM_lblDisplayCategoryArticles" class="h3AnsCnt">Other Interesting Articles in Unix / Linux / Ubuntu:</h3><br /><ul id="ctl00_ctl00_CC_CM_listviewDisplayCategoryArticles" style="list-style-type:square;font-weight:bold;"><li><a href="/Code/count-no-of-character-file-abc-1577.aspx">Count no.of character in file abc?</a></li><li><a href="/Code/shell-script-perform-string-replacement-1661.aspx">Shell script to perform string replacement in a file and view the content of file</a></li><li><a href="/Code/moving-text-unix-2888.aspx">Moving the text in unix</a></li><li><a href="/Code/count-no-of-words-file-abc-1576.aspx">Count no.of words in file abc? </a></li><li><a href="/Code/shell-scripts-finds-total-no-users-1521.aspx">Write a shell scripts that finds total no. of users and finds out how many of them are currently loggedin</a></li><li><a href="/Code/shell-check-whether-given-string-1631.aspx">Write a shell program to check whether a given string is palindrome or not. </a></li><li><a href="/Code/shell-exchange-values-two-variables-1643.aspx">Write a shell program to exchange the values of two variables</a></li><li><a href="/Code/shell-count-number-words-1638.aspx">Write a shell program to count number of words,  characters,white spaces and special symbols in a givin text  </a></li><li><a href="/Code/shell-script-delete-zero-sized-file-1693.aspx">Shell Script to delete the zero sized file using if and for</a></li><li><a href="/Code/shell-count-characters-count-lines-1652.aspx">Write a shell program to count the characters, count the lines and the words in a particular file</a></li><li><a href="/Code/menu-driven-shell-script-copy-file-1618.aspx">Write a menu driven shell script for Copy a file, Remove a file, Move a file</a></li><li><a href="/Code/shell-script-which-whenever-gets-1529.aspx">Shell script which whenever gets executed displays the message â€œGood Morning/Good afternoon /Good Evening â€œdepending on the time it get executed&quot;</a></li><li><a href="/Code/give-example-cut-command-1582.aspx">Give example of cut command?</a></li><li><a href="/Code/remove-directory-rmdir-2438.aspx">Remove a directory - rmdir</a></li><li><a href="/Code/shell-script-find-smallest-three-1633.aspx">Write a shell script to find the smallest of three numbers </a></li><li><a href="/Code/shell-script-display-exit-status-grep-1704.aspx">Shell Script to display the exit status using grep command which search a string from a string</a></li><li><a href="/Code/calculate-area-perimeter-rectangle-1517.aspx">Program to calculate the area and perimeter of the rectangle</a></li><li><a href="/Code/shell-script-prints-names-sub-1588.aspx">Shell script that prints names of all sub-directories present in the current directory</a></li><li><a href="/Code/script-delete-zero-sized-files-given-1602.aspx">write a script to delete zero sized files from a given directory (and all its subdirectories)</a></li><li><a href="/Code/change-file-mode-access-permission-2445.aspx">Change file mode access permission - chmod</a></li></ul><div>
+            &nbsp;
+        </div></div><table width="100%" align="left"><!--User Details and Related Links--><!--- Comment Box ---><tr id="ctl00_ctl00_CC_CM_pnlValidUser" align="left"><td align="left" colspan="2"><div class="MyBox PR2"><div><b>Please enter your Comment</b></div><div><textarea name="ctl00$ctl00$CC$CM$txtComment" rows="15" cols="73" id="ctl00_ctl00_CC_CM_txtComment" disabled="disabled" tabindex="3" title="Please Enter Your Comment"></textarea><br /><span id="ctl00_ctl00_CC_CM_rfvtxtComment" style="color:Red;display:none;">*</span><span id="ctl00_ctl00_CC_CM_regtxtComment" class="ErrorMsg" style="color:Red;display:none;">*</span></div><div class="FR5"><ul><li>Comment should be atleast 30 Characters.</li><li>Please put code inside [Code] your code [/Code].</li></ul></div><div id="ctl00_ctl00_CC_CM_pnlShowLoginLnk">
+                        &nbsp;<a id="ctl00_ctl00_CC_CM_lnkLogin" class="SubmitLink" href="javascript:__doPostBack(&#39;ctl00$ctl00$CC$CM$lnkLogin&#39;,&#39;&#39;)" style="font-size:1.5em;">Please login to post comment</a></div><br /></div></td></tr><tr><td colspan="2">
+                &nbsp;
+            </td></tr><!--Display Comment --><tr><td align="left" colspan="2"><span id="ctl00_ctl00_CC_CM_lblCommentsCount" style="font-weight:bold;">No Comment Found, Be the First to post comment!</span></td></tr><tr><td width="100%" colspan="2"></td></tr><tr><td align="left" colspan="2"></td></tr></table><script type="text/javascript">
+    function DisplayFullImage(ctrlimg) {
+        txtCode = "<HTML><HEAD>"
+        + "</HEAD><BODY TOPMARGIN=0 LEFTMARGIN=0 MARGINHEIGHT=0 MARGINWIDTH=0><CENTER>"
+        + "<IMG src='" + ctrlimg.src + "' BORDER=0 NAME=FullImage "
+        + "onload='window.resizeTo(document.FullImage.width,document.FullImage.height)'>"
+        + "</CENTER>"
+        + "</BODY></HTML>";
+        mywindow = window.open('', 'image', 'toolbar=0,location=0,menuBar=0,scrollbars=0,resizable=1,width=50,height=50');
+        mywindow.document.open();
+        mywindow.document.write(txtCode);
+        mywindow.document.close();
+        }
+
+//    function DisplayFullImage(ctrlimg) {
+//        txtCode = "<HTML><HEAD><Title>Article Image</Title>"
+//        + "</HEAD><BODY TOPMARGIN='0' LEFTMARGIN='0' MARGINHEIGHT='0' MARGINWIDTH='0'><CENTER>"
+//        + "<IMG src='" + ctrlimg.src + "' BORDER='0' NAME='FullImage'"
+//        + "onload='window.resizeTo(document.FullImage.width + 50,document.FullImage.height + 100)'/>"
+//        + "</CENTER>"
+//        + "</BODY></HTML>";
+//        mywindow = window.open('', 'image', 'toolbar=0,location=0,menuBar=0,scrollbars=0,resizable=1,width=900,height=800');
+//        mywindow.document.open();
+//        mywindow.document.write(txtCode);        
+//    }
+</script><script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        $("#ctl00_ctl00_CC_CM_pnlSyntax").find("p").attr("class", "pcontent");
+        $("#ctl00_ctl00_CC_CM_pnlExample").find("p").attr("class", "pcontent");
+        $("#ctl00_ctl00_CC_CM_pnlExample").find("img").css("cursor", "pointer");
+        $("#ctl00_ctl00_CC_CM_pnlExample").find("img").attr("onclick", "DisplayFullImage(this);");
+        $("#ctl00_ctl00_CC_CM_pnlExample").find("a").attr("rel", "nofollow");
+    });
+</script></div></div><div class="cb">&nbsp;</div></div><div class="fr wSidePart"><div><div class="w100p"><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td align="left"></td></tr><tr><td align="left"><div class="MyBoxHighlight PR3 w100p"><div id="ctl00_ctl00_CC_CR_LanguageCtrl1_pnlDisplaySyntaxExample"><ul class='ulLeftMnuMain'><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Unix__Linux__Ubuntu-40.aspx' class='lMnuTtllnk' title='Unix / Linux / Ubuntu'>Unix / Linux / Ubuntu</a><ul class='ulLeftMnuMain'><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/Tutorial/Easy-Unix__Linux__Ubuntu-40.aspx' title='View All'>View All</a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/Tutorial_Simple_Unix__Linux__Ubuntu-40/Advance-206.aspx' title='Advance'>Advance</a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/Tutorial_Simple_Unix__Linux__Ubuntu-40/Basics-205.aspx' title='Basics'>Basics</a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/Tutorial_Simple_Unix__Linux__Ubuntu-40/Commands-266.aspx' title='Commands'>Commands</a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/Tutorial_Simple_Unix__Linux__Ubuntu-40/Homework-Help-258.aspx' title='Homework Help'>Homework Help</a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/Tutorial_Simple_Unix__Linux__Ubuntu-40/Interview-FAQ-208.aspx' title='Interview FAQ'>Interview FAQ</a></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='/Tutorial_Simple_Unix__Linux__Ubuntu-40/Terms-and-Terminology-207.aspx' title='Terms and Terminology'>Terms and Terminology</a></li><li></li></ul></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Assembly_Language-49.aspx' class='lMnuTtllnk' title='Assembly Language'>Assembly Language</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Artificial_Intelligence-53.aspx' class='lMnuTtllnk' title='Artificial Intelligence'>Artificial Intelligence</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-C_Programming-15.aspx' class='lMnuTtllnk' title='C Programming'>C Programming</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-CPP-16.aspx' class='lMnuTtllnk' title='C++ Programming'>C++ Programming</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Visual_C-62.aspx' class='lMnuTtllnk' title='Visual C++'>Visual C++</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-OOAD-54.aspx' class='lMnuTtllnk' title='OOAD'>OOAD</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Cobol-50.aspx' class='lMnuTtllnk' title='Cobol'>Cobol</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Java-14.aspx' class='lMnuTtllnk' title='Java'>Java</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-SQL_Server-12.aspx' class='lMnuTtllnk' title='SQL Server'>SQL Server</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Aspnet_MVC-59.aspx' class='lMnuTtllnk' title='Asp.net MVC'>Asp.net MVC</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Rest_and_WCF_Services-60.aspx' class='lMnuTtllnk' title='Rest and WCF Services'>Rest and WCF Services</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Entity_Framework-58.aspx' class='lMnuTtllnk' title='Entity Framework'>Entity Framework</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-KnockoutJs-61.aspx' class='lMnuTtllnk' title='Knockout.Js'>Knockout.Js</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Networking-29.aspx' class='lMnuTtllnk' title='Networking'>Networking</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-OOPs_Concept-21.aspx' class='lMnuTtllnk' title='OOPs Concept'>OOPs Concept</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-HTML-11.aspx' class='lMnuTtllnk' title='HTML'>HTML</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Dos-51.aspx' class='lMnuTtllnk' title='Dos'>Dos</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-SQL-52.aspx' class='lMnuTtllnk' title='SQL'>SQL</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-System_Analysis__Design-55.aspx' class='lMnuTtllnk' title='System Analysis & Design'>System Analysis & Design</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Gadgets-56.aspx' class='lMnuTtllnk' title='Gadgets'>Gadgets</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Internet-57.aspx' class='lMnuTtllnk' title='Internet'>Internet</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-CSS-10.aspx' class='lMnuTtllnk' title='CSS'>CSS</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Javascript-17.aspx' class='lMnuTtllnk' title='Javascript'>Javascript</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Net_Framework-37.aspx' class='lMnuTtllnk' title='.Net Framework'>.Net Framework</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Aspnet-7.aspx' class='lMnuTtllnk' title='Asp.net'>Asp.net</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-C_Sharp-4.aspx' class='lMnuTtllnk' title='C#'>C#</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-VB_Net-5.aspx' class='lMnuTtllnk' title='VB.Net'>VB.Net</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Python-63.aspx' class='lMnuTtllnk' title='Python'>Python</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Perl-64.aspx' class='lMnuTtllnk' title='Perl'>Perl</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Oracle-13.aspx' class='lMnuTtllnk' title='Oracle'>Oracle</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Software_Engineering-19.aspx' class='lMnuTtllnk' title='Software Engineering'>Software Engineering</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-RDBMS_Terms-18.aspx' class='lMnuTtllnk' title='RDBMS Terms'>RDBMS Terms</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-AJAX_Framework-9.aspx' class='lMnuTtllnk' title='AJAX Framework'>AJAX Framework</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Design_Pattern-38.aspx' class='lMnuTtllnk' title='Design Pattern'>Design Pattern</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-UML-39.aspx' class='lMnuTtllnk' title='UML'>UML</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-WPF-41.aspx' class='lMnuTtllnk' title='WPF'>WPF</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-WCF-42.aspx' class='lMnuTtllnk' title='WCF'>WCF</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-SEO-65.aspx' class='lMnuTtllnk' title='SEO'>SEO</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-PowerShell-48.aspx' class='lMnuTtllnk' title='PowerShell'>PowerShell</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Visual_Studio-44.aspx' class='lMnuTtllnk' title='Visual Studio'>Visual Studio</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-WWF-43.aspx' class='lMnuTtllnk' title='WWF'>WWF</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-BizTalk_Server-45.aspx' class='lMnuTtllnk' title='BizTalk Server'>BizTalk Server</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Azure-46.aspx' class='lMnuTtllnk' title='Azure'>Azure</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-General-47.aspx' class='lMnuTtllnk' title='General'>General</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Testing-20.aspx' class='lMnuTtllnk' title='Testing'>Testing</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Online_Certifications-30.aspx' class='lMnuTtllnk' title='Online Certifications'>Online Certifications</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-PHP-35.aspx' class='lMnuTtllnk' title='PHP'>PHP</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-My_SQL-36.aspx' class='lMnuTtllnk' title='My SQL'>My SQL</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-LinQ-6.aspx' class='lMnuTtllnk' title='LinQ'>LinQ</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Project_Management-22.aspx' class='lMnuTtllnk' title='Project Management'>Project Management</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-Silverlight-23.aspx' class='lMnuTtllnk' title='Silverlight'>Silverlight</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-XML-25.aspx' class='lMnuTtllnk' title='XML'>XML</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-MS_Office-32.aspx' class='lMnuTtllnk' title='MS Office'>MS Office</a></li><li class='MyBox RowBG1 pad-5'>&nbsp;<a href='/Tutorial/Easy-Windows_OS-33.aspx' class='lMnuTtllnk' title='Windows OS'>Windows OS</a></li><li class='MyBox RowBG2 pad-5'>&nbsp;<a href='/Tutorial/Easy-DHTML-31.aspx' class='lMnuTtllnk' title='DHTML'>DHTML</a></li><li class='MyBox PR4 pad-5'>&nbsp;<a href='http://www.go4sharepoint.com' class='lMnuTtllnk' title='Sharepoint' target='_blank'>Sharepoint</a></li></ul></div></div></td></tr></table></div></div><div class="cb">&nbsp;</div></div><div class="cb">&nbsp;</div></div></div></div><div id="footer-container" align="center"><div>
+                    &nbsp;</div><div style="background-color: #F0F0F0;">
+                    &nbsp;
+                </div><div class="MaxWidth"><div><table><tr><td align="left"><b>RSS Feeds:</b></td><td align="left"><div><a href="http://feeds.feedburner.com/syntaxexamplearticlesRssFeed" id="ctl00_ctl00_RSSftrArticle" target="_blank">Articles</a>&nbsp;|
+                                        &nbsp;<a href="http://feeds.feedburner.com/syntaxexampleForum" id="ctl00_ctl00_RSSftrForum" target="_blank">Forum</a>&nbsp;|
+                                        &nbsp;<a href="http://feeds.feedburner.com/syntaxexampleMembersRssFeed" id="ctl00_ctl00_RSSftrUser" target="_blank">New Users</a>&nbsp;|
+                                        &nbsp;<a href="http://feeds.feedburner.com/syntaxexampleActivityLogRssFeed" id="ctl00_ctl00_RSSftrLog" target="_blank">Activities</a>&nbsp;|
+                                        &nbsp;<a href="http://feeds.feedburner.com/syntaxexampleInterview" id="ctl00_ctl00_RSSftrIntFAQ" target="_blank">Interview
+                                            FAQ</a>&nbsp;| &nbsp;<a href="http://feeds.feedburner.com/syntaxexamplePollRssFeed" id="ctl00_ctl00_RSSftrPoll" target="_blank">Poll</a>&nbsp;| &nbsp;<a href="http://feeds.feedburner.com/syntaxexampleHotLinks" id="ctl00_ctl00_RSSftrLinks" target="_blank">Hotlinks</a></div></td></tr><tr><td align="left"><b>Social Networking:</b></td><td align="left"><div><a href="/HallofFame.aspx">Hall of Fame</a> &nbsp;|&nbsp; <a href="http://www.facebook.com/DailyFreeCode" id="ctl00_ctl00_hlFacebook" target="_blank">Facebook</a>
+                                        &nbsp;|&nbsp; <a href="http://twitter.com/dailyfreecode" id="ctl00_ctl00_hlTweet" target="_blank">
+                                            Twitter</a> &nbsp;|&nbsp; <a href="http://www.linkedin.com/groups?gid=3227304" id="ctl00_ctl00_hlLinkedIn" target="_blank">LinkedIn</a></div></td></tr><tr><td align="left"><b>Terms:</b></td><td align="left"><div><a href="/TermsOfUse.aspx">Terms of Use</a> &nbsp;|&nbsp; <a
+                                            href="/PrivacyPolicy.aspx">Privacy Policy</a>&nbsp;|&nbsp;
+                                         <a
+                                            href="/ContactUs.aspx">Contact us</a></div></td></tr></table></div><div>
+                        &nbsp;</div><div id="ctl00_ctl00_pnlFooter"><a target="_blank" rel="nofollow"  href="http://www.dmca.com/Protection/Status.aspx?ID=af722e18-04b2-47d9-b00f-40bdff76faf1" title="DMCA"><img src ="http://images.dmca.com/Badges/dmca_protected_sml_120m.png?ID=af722e18-04b2-47d9-b00f-40bdff76faf1"  alt="DMCA.com" /></a></div><div>
+                        &nbsp;</div><div>
+                        Copyright Â© 2008-2012
+                    </div></div></div></div><script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_ctl00_CC_CM_valSummary"));
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_CC_CM_rfvtxtComment"), document.getElementById("ctl00_ctl00_CC_CM_regtxtComment"));
+//]]></script><script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_CC_CM_valSummary = document.all ? document.all["ctl00_ctl00_CC_CM_valSummary"] : document.getElementById("ctl00_ctl00_CC_CM_valSummary");
+ctl00_ctl00_CC_CM_valSummary.showmessagebox = "True";
+ctl00_ctl00_CC_CM_valSummary.showsummary = "False";
+ctl00_ctl00_CC_CM_valSummary.validationGroup = "comment";
+var ctl00_ctl00_CC_CM_rfvtxtComment = document.all ? document.all["ctl00_ctl00_CC_CM_rfvtxtComment"] : document.getElementById("ctl00_ctl00_CC_CM_rfvtxtComment");
+ctl00_ctl00_CC_CM_rfvtxtComment.controltovalidate = "ctl00_ctl00_CC_CM_txtComment";
+ctl00_ctl00_CC_CM_rfvtxtComment.errormessage = "Please enter comment";
+ctl00_ctl00_CC_CM_rfvtxtComment.display = "Dynamic";
+ctl00_ctl00_CC_CM_rfvtxtComment.validationGroup = "comment";
+ctl00_ctl00_CC_CM_rfvtxtComment.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_CC_CM_rfvtxtComment.initialvalue = "";
+var ctl00_ctl00_CC_CM_regtxtComment = document.all ? document.all["ctl00_ctl00_CC_CM_regtxtComment"] : document.getElementById("ctl00_ctl00_CC_CM_regtxtComment");
+ctl00_ctl00_CC_CM_regtxtComment.controltovalidate = "ctl00_ctl00_CC_CM_txtComment";
+ctl00_ctl00_CC_CM_regtxtComment.errormessage = "Please enter valid and descriptive comment. Comment should be atleast 30 Characters.";
+ctl00_ctl00_CC_CM_regtxtComment.display = "Dynamic";
+ctl00_ctl00_CC_CM_regtxtComment.validationGroup = "comment";
+ctl00_ctl00_CC_CM_regtxtComment.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_ctl00_CC_CM_regtxtComment.validationexpression = "[\\S\\s]{15,5000}$";
+//]]></script><div><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="B2B31B54" /></div><script src="/WebResource.axd?d=L7lItzGYlxsl5mcMrOcEtzACSDEJPdmRH5C5WOO7Kv4rwcor4PQE9Cg5HJjnyNCZ2Ob1UUouhFiw883EOQDqXkdhW6fvnRfIBvb_M1YIREQ1&amp;t=636065005291802409" type="text/javascript"></script><script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]></script></form><script type='text/javascript'>
+    function _dmBootstrap(file) {
+        var _dma = document.createElement('script'); 
+        _dma.type = 'text/javascript';
+        _dma.async = true; 
+        _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);
+    }
+    function _dmFollowup(file) { if (typeof DMAds === 'undefined')  _dmBootstrap('cdn2.DeveloperMedia.com/a.min.js');}
+    (function () { _dmBootstrap('cdn1.DeveloperMedia.com/a.min.js'); setTimeout(_dmFollowup, 2000);})();
+</script></body></html>È4Q÷      Xªé–Xªé©=u¯ê       P:http://www.dailyfreecode.com/code/shell-script-menu-driven-calculator-1694.aspx necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+Server: Microsoft-IIS/8.0
+X-Powered-By: UrlRewriter.NET 2.0.0, ASP.NET
+X-AspNet-Version: 4.0.30319
+Date: Mon, 20 Feb 2017 13:05:31 GMT
+Content-Length: 40474
+ charset UTF-8 uncompressed-len 0   ž

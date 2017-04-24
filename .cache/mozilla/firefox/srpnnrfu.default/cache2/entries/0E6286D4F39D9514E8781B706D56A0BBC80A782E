@@ -1,0 +1,2553 @@
+<!DOCTYPE HTML>
+
+<html>
+<head><title>Draw a filled Rectangle using OpenGL - CodeProject</title><link type="text/css" rel="stylesheet" href="https://codeproject.global.ssl.fastly.net/App_Themes/CodeProject/Css/Main.min.css?dt=2.8.170215.1">
+<style type="text/css">
+div.grippie { background:#eee url(https://codeproject.global.ssl.fastly.net/images/gripH.png) no-repeat scroll center 2px;
+border-color:#ddd;
+border-style:solid;
+border-width:0pt 1px 1px;
+cursor:s-resize;
+height:9px;
+overflow:hidden;
+}
+.resizable-control textarea {
+display:block;
+margin-bottom:0pt;
+width:95%;
+height: 20%;
+}
+
+</style>
+
+<link type="text/css" rel="stylesheet" href="https://codeproject.global.ssl.fastly.net/App_Themes/CodeProject/Css/Main.min.css?dt=2.8.170215.1">
+<style type="text/css">
+div.grippie { background:#eee url(https://codeproject.global.ssl.fastly.net/images/gripH.png) no-repeat scroll center 2px;
+border-color:#ddd;
+border-style:solid;
+border-width:0pt 1px 1px;
+cursor:s-resize;
+height:9px;
+overflow:hidden;
+}
+.resizable-control textarea {
+display:block;
+margin-bottom:0pt;
+width:95%;
+height: 20%;
+}
+
+</style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Question",
+  "headline": "Draw a filled Rectangle using OpenGL",
+  "url": "https://www.codeproject.com/Questions/226294/Draw-a-filled-Rectangle",
+  "discussionUrl": "https://www.codeproject.com/Questions/226294/Draw-a-filled-Rectangle",
+  "isFamilyFriendly": "true",
+  "image": "https://www.codeproject.com/App_Themes/CodeProject/Img/Article100.png",
+  "description": "I want to draw a filled rectangle in vC6 using OPENGL..pls help me with this",
+  "keywords": "C++, VC6, OpenGL",
+  "answerCount": "3",
+  "upvoteCount": "0",
+  "suggestedAnswer" : [{
+    "@type" : "Answer",
+    "name" : "Draw a filled Rectangle using OpenGL",
+    "url" : "https://www.codeproject.com/Answers/226299/Draw-a-filled-Rectangle"
+    },{
+    "@type" : "Answer",
+    "name" : "Draw a filled Rectangle using OpenGL",
+    "url" : "https://www.codeproject.com/Answers/226437/Draw-a-filled-Rectangle-using-OpenGL"
+    },{
+    "@type" : "Answer",
+    "name" : "Draw a filled Rectangle using OpenGL",
+    "url" : "https://www.codeproject.com/Answers/607389/DrawplusaplusfilledplusRectangleplususingplusOpenG"
+    }],
+  "author" : [{
+      "@type" : "Person",
+      "name" : "Sona from kerala",
+      "url" : "https://www.codeproject.com/script/Membership/View.aspx?mid=7939136"
+    }],
+  "datePublished": "2011-07-15",
+  "dateCreated": "2011-07-15",
+  "dateModified": "2011-07-15",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "CodeProject"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item" : {
+      "@id" : "/Chapters/6/General-Programming.aspx",
+      "name" : "General Programming"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item" : {
+      "@id" : "/KB/answers/",
+      "name" : "Uncategorised Quick Answers"
+    }
+  }]
+}
+</script>
+<meta http-equiv="content-language" content="en-US">
+<meta charset="UTF-8">
+<meta name="Description" content="Free source code and tutorials for Software developers and Architects.; Updated: 16 Jun 2013">
+<meta name="Keywords" content="Free source code, tutorials">
+<meta name="Author" content="CodeProject">
+<meta name="Rating" content="General">
+<meta name="Revisit-After" content="1 days">
+<meta name="application-name" content="CodeProject">
+<meta name="google-translate-customization" content="d908bb7ce7aff658-4c2f3a504525c916-g629383f736781a8a-13">
+
+<link rel="dns-prefetch" href="//ajax.googleapis.com"> 
+
+
+
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - All Topics" href="https://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=1" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Latest articles - Android" href="https://www.codeproject.com/WebServices/ArticleRSS.aspx?cat=22" />
+<link rel="alternate" type="application/rss+xml" title="CodeProject Lounge Postings" href="https://www.codeproject.com/webservices/LoungeRSS.aspx" />
+<meta name="robots" content="index, follow" />
+<link rel="search" type="application/opensearchdescription+xml" title="CodeProject" href="https://www.codeproject.com/info/OpenSearch.xml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<base target="_top" >
+	<link rel="icon" href="/favicon.ico" type="image/ico" >
+<link rel="shortcut icon" href="/favicon.ico"  type="image/ico" >
+<link rel="apple-touch-icon" href="/images/FavIcon-Apple.png" type="image/png" >
+<script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script type='text/javascript'>//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  var altScript  = document.createElement('script');
+  altScript.type = 'text/javascript';
+  altScript.src  = unescape('%2fscript%2fJS%2fjquery.1.6.2.js');
+  var target = document.getElementsByTagName('script')[0];
+  target.parentNode.insertBefore(altScript, target);
+}//]]></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+function defrm () { /* thanks twitter */ document.write = ''; window.top.location = window.self.location;  setTimeout(function() { document.body.innerHTML = ''; }, 0);  window.self.onload = function(evt) { document.body.innerHTML = ''; }; }if (window.top !== window.self) {  try {  if (window.top.location.host) { /* will throw */ } else { defrm(); /* chrome */ }  } catch (ex) { defrm(); /* everyone else */ } }if (typeof(DemoUrl)!='undefined')   document.write(unescape('%3Cme')+'ta http'+'-equiv="re'+'fresh"                  con'+'tent="1;url='+DemoUrl+unescape('"%3CE'));
+!function () { !function t(n, e, o) { function r(i, u) { if (!e[i]) { if (!n[i]) { var a = 'function' == typeof require && require; if (!u && a) return a(i, !0); if (c) return c(i, !0); var s = new Error("Cannot find module '" + i + "'"); throw s.code = "MODULE_NOT_FOUND", s } var f = e[i] = { exports: {} }; n[i][0].call(f.exports, function (t) { var e = n[i][1][t]; return r(e ? e : t) }, f, f.exports, t, n, e, o) } return e[i].exports } for (var c = "function" == typeof require && require, i = 0; i < o.length; i++) r(o[i]); return r }({ 1: [function (t, n, e) { "use strict"; !function (n, e, o) { function r() { v || (v = !0, f = n._sp_ && n._sp_.config || {}, p = f.content_control_callback || n._sp_lock, d = f.account_id || f.client_id || n.sp_cid) } function c(t, n) { var e = new Image; e.src = "//" + m + "/cct?v=" + o(h) + "&ct=1&cid=" + o(d) + "&l=" + o(t) + "&rc=" + o(n) } function i(t, o, r) { n.addEventListener("error", function (n) { n.filename.substring(n.filename.indexOf("//")) === t && (_ = !0) }); var c = e.createElement("script"); c.src = t, c.onload = function () { setTimeout(o, 0) }, c.onerror = function () { u(t, r) }, e.head.appendChild(c), e.querySelector('script[src="' + t + '"]') || r(2) } function u(t, o) { var r = new XMLHttpRequest; try { r.open("HEAD", t) } catch (c) { var i = e.createElement("a"); i.src = t, n.location.protocol === i.protocol && o(1) } r.onreadystatechange = function () { 4 !== this.readyState || "2" !== this.status.toString()[0] && 0 !== this.status || o(0) }; try { r.send() } catch (c) { o(1) } } function a(t) { c(1, t), p && setTimeout(function () { p() }, 250) } function s(t, e) { r(), e && (p = n._sp_lock = e), i(t, function () { return _ ? void c(0, 0) : void ((f && !f.has_been_read || !n._sp_) && c(0, 1)) }, a) } var f, p, d, l = t(2), _ = !1, v = !1, m = l.be.join(""), h = l.bv; n.spBootstrap = s }(window, document, encodeURIComponent) }, {}], 2: [function (t, n, e) { "use strict"; n.exports = { be: ["w", "w", "w", ".", "c", "o", "m", "r", "a", "d", "e", "p", "o", "n", "y", ".", "c", "o", "m"], bv: "1.6.45" } }, {}] }, {}, [1]) }();
+  window.spBootstrap(('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.codeproject.com/dm/c.min.js?v=1.1');
+
+//]]>
+</script>
+<link rel="icon" href="/favicon.ico" type="image/ico" >
+<link rel="shortcut icon" href="/favicon.ico"  type="image/ico" >
+<link rel="apple-touch-icon" href="/images/FavIcon-Apple.png" type="image/png" >
+<script type="text/javascript" language="Javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script><script type='text/javascript'>//<![CDATA[
+if (typeof jQuery == 'undefined') {
+  var altScript  = document.createElement('script');
+  altScript.type = 'text/javascript';
+  altScript.src  = unescape('%2fscript%2fJS%2fjquery.1.6.2.js');
+  var target = document.getElementsByTagName('script')[0];
+  target.parentNode.insertBefore(altScript, target);
+}//]]></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+function defrm () { /* thanks twitter */ document.write = ''; window.top.location = window.self.location;  setTimeout(function() { document.body.innerHTML = ''; }, 0);  window.self.onload = function(evt) { document.body.innerHTML = ''; }; }if (window.top !== window.self) {  try {  if (window.top.location.host) { /* will throw */ } else { defrm(); /* chrome */ }  } catch (ex) { defrm(); /* everyone else */ } }if (typeof(DemoUrl)!='undefined')   document.write(unescape('%3Cme')+'ta http'+'-equiv="re'+'fresh"                  con'+'tent="1;url='+DemoUrl+unescape('"%3CE'));
+!function () { !function t(n, e, o) { function r(i, u) { if (!e[i]) { if (!n[i]) { var a = 'function' == typeof require && require; if (!u && a) return a(i, !0); if (c) return c(i, !0); var s = new Error("Cannot find module '" + i + "'"); throw s.code = "MODULE_NOT_FOUND", s } var f = e[i] = { exports: {} }; n[i][0].call(f.exports, function (t) { var e = n[i][1][t]; return r(e ? e : t) }, f, f.exports, t, n, e, o) } return e[i].exports } for (var c = "function" == typeof require && require, i = 0; i < o.length; i++) r(o[i]); return r }({ 1: [function (t, n, e) { "use strict"; !function (n, e, o) { function r() { v || (v = !0, f = n._sp_ && n._sp_.config || {}, p = f.content_control_callback || n._sp_lock, d = f.account_id || f.client_id || n.sp_cid) } function c(t, n) { var e = new Image; e.src = "//" + m + "/cct?v=" + o(h) + "&ct=1&cid=" + o(d) + "&l=" + o(t) + "&rc=" + o(n) } function i(t, o, r) { n.addEventListener("error", function (n) { n.filename.substring(n.filename.indexOf("//")) === t && (_ = !0) }); var c = e.createElement("script"); c.src = t, c.onload = function () { setTimeout(o, 0) }, c.onerror = function () { u(t, r) }, e.head.appendChild(c), e.querySelector('script[src="' + t + '"]') || r(2) } function u(t, o) { var r = new XMLHttpRequest; try { r.open("HEAD", t) } catch (c) { var i = e.createElement("a"); i.src = t, n.location.protocol === i.protocol && o(1) } r.onreadystatechange = function () { 4 !== this.readyState || "2" !== this.status.toString()[0] && 0 !== this.status || o(0) }; try { r.send() } catch (c) { o(1) } } function a(t) { c(1, t), p && setTimeout(function () { p() }, 250) } function s(t, e) { r(), e && (p = n._sp_lock = e), i(t, function () { return _ ? void c(0, 0) : void ((f && !f.has_been_read || !n._sp_) && c(0, 1)) }, a) } var f, p, d, l = t(2), _ = !1, v = !1, m = l.be.join(""), h = l.bv; n.spBootstrap = s }(window, document, encodeURIComponent) }, {}], 2: [function (t, n, e) { "use strict"; n.exports = { be: ["w", "w", "w", ".", "c", "o", "m", "r", "a", "d", "e", "p", "o", "n", "y", ".", "c", "o", "m"], bv: "1.6.45" } }, {}] }, {}, [1]) }();
+  window.spBootstrap(('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.codeproject.com/dm/c.min.js?v=1.1');
+
+//]]>
+</script>
+
+
+
+
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-1735123-1']);
+	_gaq.push(['_trackPageview']);
+	_gaq.push(['_setDomainName', 'www.codeproject.com']);
+	_gaq.push(['_setSessionTimeout', '1200']); 
+
+	(function () {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})(); 
+</script>
+
+</head>
+<body class="firefox firefox37">
+
+<a class="access-link" href="#Main"><img alt="Click here to Skip to main content" src="https://codeproject.global.ssl.fastly.net/images/t.gif" /></a>
+
+
+
+<div class="page-background">
+
+	
+	<div id="ctl00_ctl00_STM" class="site-top-menu fixed">
+		<div class="main-content">
+			
+
+<div class="container memberbar clearfix">
+
+	<div id="ctl00_ctl00_MemberMenu_GenInfo" class="float-left">12,748,373 members (41,538 online)</div>
+
+	<div class="float-left">
+		
+	</div>
+
+	<div class="float-right">
+
+		
+
+		
+
+		
+
+			<script type="text/javascript">//<!--
+			function doSubmit(secure)
+			{
+				if (secure)
+					document.subForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle"
+				else
+					document.subForm.action = "https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle"
+				document.subForm.submit();
+				return true;
+			}//-->
+			</script>
+
+			<a name="SignUp"></a>
+			<span class="member-signin tooltip openable">
+				<span><a href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle">Sign in</a></span>
+
+				<div class="tooltip-flyout">
+					<form name="subForm" id="subForm" action="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle" method="post" 
+						class="tight">
+
+						
+						<input id="FormName" name="FormName" value="MenuBarForm" type="hidden" />
+
+						<div>Email</div>
+						<div><input class="small-text" type="email" name="Email" id="Email" /></div>
+						<div>Password</div>
+						<div><input class="small-text" type="password" name="Password" id="Password" /></div>
+						<div class="action">
+							
+                                  <input id='joinBtn' type='button' class='create hidden' onclick='return Join();' value='Join' />
+                                  <input type='hidden' name='fld_quicksign' value='true' />
+                                  <script type="text/javascript">
+                                  function simpleMask(str, key) {
+                                      var result = ''; 
+                                      for (var i = 0; i < str.length; ++i)
+                                          result += String.fromCharCode(key ^ str.charCodeAt(i));
+                                      return result;
+                                  }
+                                  function Join() {
+                                      var url = 'https://www.codeproject.com/script/Membership/Modify.aspx';
+document.location.href=url;
+                                      return false;
+                                  }
+                                  $('#joinBtn').css('visibility', 'visible');
+                                  </script>
+							<input type="submit" value="Sign in" class="signin" 
+								onclick="return doSubmit(false);" />
+						</div>
+
+						<div class="container">
+							
+							&nbsp;
+							<a id="ctl00_ctl00_MemberMenu_SendPassword" class="forgot float-right" href="/script/Membership/SendPassword.aspx?rp=/Questions/226294/Draw-a-filled-Rectangle">Forgot your password?</a>
+						</div>
+					</form>
+
+					<hr class="divider-dark" />
+
+					Sign in with <a class="oauth" title="Sign in using Github" href="/script/Membership/OAuthLogOn.aspx?auth=GitHub"><img src="/script/Membership/Images/octicons_github.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+<a class="oauth" title="Sign in using Linkedin" href="/script/Membership/OAuthLogOn.aspx?auth=LinkedIn"><img src="/script/Membership/Images/linkedin.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+<a class="oauth" title="Sign in using Facebook" href="/script/Membership/OAuthLogOn.aspx?auth=Facebook"><img src="/script/Membership/Images/facebook.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+<a class="oauth" title="Sign in using Google" href="/script/Membership/OAuthLogOn.aspx?auth=Google"><img src="/script/Membership/Images/google-plus.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+<a class="oauth" title="Sign in using Microsoft" href="/script/Membership/OAuthLogOn.aspx?auth=Microsoft"><img src="/script/Membership/Images/microsoft.png" style="vertical-align:middle;padding-right:3px;border:0;" /></a>
+
+				</div>
+            </span>
+		
+	</div>
+</div>
+		</div>
+	</div>
+
+	
+	<div id="ctl00_ctl00_SH" class="site-header fixed">
+		<div class="main-content">
+			<div class="logo"><a href="/"><img id="ctl00_ctl00_Logo" tabindex="1" title="CodeProject" src="https://codeproject.global.ssl.fastly.net/App_Themes/CodeProject/Img/logo250x135.gif" alt="Home" style="height:135px;width:250px;border-width:0px;" /></a></div>
+			<div class="promo"><div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros"  data-tags='VC6, C++, OpenGL,pos_top'><noscript><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=533398"><img src="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=533398"  width="728px" height="90px" target="_blank"/></a></noscript></div></div>
+		</div>
+	</div>
+
+	
+	<div id="ctl00_ctl00_TPR" class="sub-headerbar clearfix fixed">
+	<div class="float-right">
+		
+
+<div class="searchbar">
+
+<form method="get" action="/search.aspx?sbo=kw" name="Search" class="tight">
+
+
+<table border="0" cellspacing="0" cellpadding="0" class="search"><tr><td><input TabIndex="2" class="search " id="sb_tb" value="" name="q" /></td><td><input type="image" src="https://codeproject.global.ssl.fastly.net/images/search.gif" /></td></tr></table>
+
+<div class="hover-container">
+	<div id="SearchFilter" class="search-advanced popup small-text align-left">
+	<b>Search within:<br /></b>
+		
+		<input type="radio" id="sb_kw" name="sbo" value="kw"><label for="sb_kw">Articles</label><br>
+<input type="radio" id="sb_qa" name="sbo" value="qa" checked="true"><label for="sb_qa">Quick Answers</label><br>
+<input type="radio" id="sb_fm" name="sbo" value="fm"><label for="sb_fm">Messages</label><br>
+
+
+		
+		<div id="ctl00_ctl00_SearchBarCtrl_UseSavedFilters" class="padded-top"><input type="checkbox" id="usf" name="usf" /><label for="usf">Use my saved <a target="_blank" href="https://www.codeproject.com/script/Membership/Modify.aspx#contentfilter">content filters</a></label><input type="hidden" id="usfc" name="usfc" value="false" /></div>
+
+		
+		
+	</div>
+</div>
+</form>
+
+</div>
+	</div>
+	<div class="float-left">
+		
+
+<div class="navbar clearfix">
+<ul class="navmenu openable">
+
+<li class="desktop-only"><a id="ctl00_ctl00_TopNavBar_Home" href="https://www.codeproject.com">home</a>
+
+
+<li class="openable"><a id="ctl00_ctl00_TopNavBar_Art" class="down" href="/script/Articles/Latest.aspx">articles</a>
+
+	<ul>
+		<li class="openable"><a id="ctl00_ctl00_TopNavBar_ArtTopicList" class="fly" onmouseover="navBarMenu.ShowMap(this, &#39;ctl00_ctl00_TopNavBar_MapFlyout&#39;);" href="/script/Content/SiteMap.aspx">Chapters and Sections<span class="has-submenu">&gt;</span></a><ul id="ctl00_ctl00_TopNavBar_MapFlyout">
+			<li>
+				<div id="siteMap">
+					<img src="https://codeproject.global.ssl.fastly.net/images/animated.gif" alt="loading" style="margin:150px;width:100px;height:100px;" />
+				</div>
+			</li>
+			</ul>
+		</li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtSearch" class="fly break" href="/search.aspx?sbo=kw">Search</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtLatestArts" class="fly" href="/script/Articles/Latest.aspx?at=1,3,7">Latest Articles</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtLatestTips" class="fly" href="/script/Articles/Latest.aspx?at=6">Latest Tips/Tricks</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtTop" class="fly" href="/script/Articles/TopArticles.aspx?ta_so=5">Top Articles</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtBeginner" class="fly" href="/search.aspx?sbo=kw?aidlst=152&amp;sa_us=True">Beginner Articles</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtBlogArticles" class="fly break" href="/script/Articles/BlogArticleList.aspx">Technical Blogs</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtGuide" class="fly" href="/info/Submit.aspx">Posting/Update Guidelines</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtHelpForum" class="fly" href="/Forums/1641/Article-Writing.aspx">Article Help Forum</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtCompetition" class="fly break" href="/script/Awards/CurrentCompetitions.aspx?cmpTpId=1">Article Competition</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtPostArticle" class="fly highlight1" href="/script/Articles/Submit.aspx">
+			<img src="https://codeproject.global.ssl.fastly.net/images/write13.png" width="13px" height="13px" /> Submit an article or tip
+			</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_ArtPostBlog" class="fly highlight2" href="/script/Articles/BlogFeed.aspx">
+			<img src="https://codeproject.global.ssl.fastly.net/images/write13.png" width="13px" height="13px" /> Post your Blog
+			</a></li>		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class="openable">
+<a id="ctl00_ctl00_TopNavBar_Answers" class=" selected" href="/script/Answers/List.aspx?tab=active">
+    <span class="desktop-only tablet-only">quick answers</span><span class="mobile-only">Q&amp;A</span>
+</a>
+	<ul>
+		
+
+		<li><a id="ctl00_ctl00_TopNavBar_QAAsk" class="fly highlight2" href="/Questions/ask.aspx"><img 
+			src="https://codeproject.global.ssl.fastly.net/images/write13.png" width="13px" height="13px" /> Ask a Question</a></li>
+
+		
+		<li><a id="ctl00_ctl00_TopNavBar_QAUnanswered" class="fly" href="/script/Answers/List.aspx?tab=unanswered">View Unanswered Questions</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_QALatest" class="fly" href="/script/Answers/List.aspx?tab=active">View All Questions...</a></li>
+		
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl00_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=120" style="padding-left:30px">Linux questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl01_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=81" style="padding-left:30px">C# questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl02_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=4175" style="padding-left:30px">fabric questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl03_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=85" style="padding-left:30px">ASP.NET questions</a></li>
+			
+				<li><a id="ctl00_ctl00_TopNavBar_QATR_ctl04_Tag" class="fly" href="/script/Answers/List.aspx?tab=active&amp;alltags=true&amp;tags=78" style="padding-left:30px">C++ questions</a></li>
+			
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+
+<li class="openable"><a id="ctl00_ctl00_TopNavBar_Forums" href="/script/Forums/List.aspx">
+        <span class="desktop-only tablet-only">discussions</span><span class="mobile-only">forums</span>
+</a>
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_MessageBoardsAll" class="fly" href="/script/Forums/List.aspx">All Message Boards...</a></li>
+		<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/1580997/Application-Lifecycle.aspx">Application Lifecycle<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/1533717/Running-a-Business.aspx">Running a Business</a></li>
+<li><a class="fly" href="/Forums/1533716/Sales-Marketing.aspx">Sales / Marketing</a></li>
+<li><a class="fly" href="/Forums/1651/Collaboration-Beta-Testing.aspx">Collaboration / Beta Testing</a></li>
+<li><a class="fly" href="/Forums/3304/Work-Issues.aspx">Work  Issues</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/369270/Design-and-Architecture.aspx">Design and Architecture</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/12076/ASP-NET.aspx">ASP.NET</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1580226/JavaScript.aspx">JavaScript</a>
+</li>
+<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/1647/C-Cplusplus-MFC.aspx">C / C++ / MFC<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/4486/ATL-WTL-STL.aspx">ATL /  WTL / STL</a></li>
+<li><a class="fly" href="/Forums/3785/Managed-Cplusplus-CLI.aspx">Managed C++/CLI</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1649/Csharp.aspx">C#</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1627782/Free-Tools.aspx">Free Tools</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1827460/Objective-C-and-Swift.aspx">Objective-C and Swift</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1725/Database.aspx">Database</a>
+</li>
+<li class="openable"><a class="fly" style="padding-left:30px" href="/Forums/186301/Hardware-Devices.aspx">Hardware &amp; Devices<span class="has-submenu">&gt;</span></a>
+<ul class="openable"><li><a class="fly" href="/Forums/1644/System-Admin.aspx">System Admin</a></li>
+</ul></li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1606152/Hosting-and-Servers.aspx">Hosting and Servers</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1643/Java.aspx">Java</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1650/NET-Framework.aspx">.NET Framework</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1848626/Android.aspx">Android</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1876716/iOS.aspx">iOS</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/13695/Mobile.aspx">Mobile</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1540733/SharePoint.aspx">SharePoint</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1004257/Silverlight-WPF.aspx">Silverlight / WPF</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1646/Visual-Basic.aspx">Visual Basic</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1640/Web-Development.aspx">Web Development</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/suggestions.aspx">Site Bugs / Suggestions</a>
+</li>
+<li><a class="fly" style="padding-left:30px" href="/Forums/1652005/Spam-and-Abuse-Watch.aspx">Spam and Abuse Watch</a>
+</li>
+
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+<li class="openable desktop-only"><a id="ctl00_ctl00_TopNavBar_Features" href="/Feature/">features</a>
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_Comps" class="fly" href="/script/Awards/CurrentCompetitions.aspx?cmpTpId=1&amp;awsac=true">Competitions</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_News" class="fly" href="/script/News/List.aspx">News</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Insider" class="fly" href="/Feature/Insider/">The Insider Newsletter</a></li>
+    	<li><a id="ctl00_ctl00_TopNavBar_DailyBuild" class="fly" href="/Feature/DailyBuild">The Daily Build Newsletter</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Newsletters" class="fly" href="/script/Mailouts/Archive.aspx?mtpid=1">Newsletter archive</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Surveys" class="fly" href="/script/Surveys/List.aspx">Surveys</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Showcase" class="fly" href="/KB/showcase/">Product Showcase</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_Research" class="fly" href="/script/ResearchLibrary/Index.aspx">Research Library</a></li>
+
+		<li><a id="ctl00_ctl00_TopNavBar_Stuff" class="fly" href="/Info/Stuff.aspx">CodeProject Stuff</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+
+<li  class="openable"><a id="ctl00_ctl00_TopNavBar_Lounge" href="/Lounge.aspx">
+            <span class="desktop-only tablet-only">community</span><span class="mobile-only">lounge</span>
+</a>
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_WhosWho" class="fly" href="/script/Membership/Profiles.aspx">Who's Who</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_MVPs" class="fly break" href="/script/Awards/MVPWinners.aspx">Most Valuable Professionals</a></li>
+		
+
+		<li><a id="ctl00_ctl00_TopNavBar_LoungeLnk" class="fly highlight2" href="/Lounge.aspx">The Lounge Â </a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_InsiderLnk" class="fly" href="/Insider.aspx">The Insider News</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_WeirdWonderful" class="fly" href="/Feature/WeirdAndWonderful.aspx">The Weird & The Wonderful</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_SoapBoxLnk" class="fly" href="/Forums/1536756/The-Soapbox.aspx">The Soapbox</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_PRLnk" class="fly break" href="/Forums/1738007/Press-Releases.aspx">Press Releases</a></li>
+
+		
+		<li class="openable"><a class="fly" href="/Forums/1580229/Hindi.aspx">Non-English Language
+			<span class="has-submenu">&gt;</span></a>
+		<ul>
+		<li><a class="fly" href="/Forums/1580229/Hindi.aspx">General Indian Topics</a></li>
+		<li><a class="fly" href="/Forums/1580230/Chinese.aspx">General Chinese Topics</a></li>
+		</ul>
+		<li class="last"></li>
+		
+	</ul>
+
+</li>
+
+
+<li class="openable desktop-only tablet-only" style="margin-left:20px"><a id="ctl00_ctl00_TopNavBar_Help" href="/KB/FAQs/">help</a>
+
+	<ul>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpWhatIs" class="fly" href="/info/guide.aspx">What is 'CodeProject'?</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpGeneral" class="fly break" href="/KB/FAQs/">General FAQ</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpPostQuestion" class="fly break highlight2" href="/Questions/ask.aspx">Ask a Question</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpBugs" class="fly" href="/suggestions.aspx">Bugs and Suggestions</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpArticles" class="fly" href="/Forums/1641/Article-Writing.aspx">Article Help Forum</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpSiteMap" class="fly" href="/script/Content/SiteMap.aspx">Site Map</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpAdvertise" class="fly" href="http://developermedia.com/">Advertise with us</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpAboutAds" class="fly" href="/info/AboutOurAds.aspx">About our Advertising</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpJobs" class="fly" href="/info/Jobs/">Employment Opportunities</a></li>
+		<li><a id="ctl00_ctl00_TopNavBar_HelpAboutUs" class="fly" href="/info/about.aspx">About Us</a></li>
+		<li class="last"></li>
+	</ul>
+
+</li>
+
+</ul>
+
+</div>
+	</div>
+	<div class="sub-headerbar-divider"></div>
+	</div>		
+	
+
+	<div id="C" class="container-content-wrap fixed"> 
+	<div class="container-content">
+
+		<div class="container-breadcrumb">
+		
+		</div>
+
+		
+		
+		
+
+		<div id="ctl00_ctl00_ContentPane" class="container-main ">
+
+			
+
+				<div style="min-height:600px">
+					<a name="Main"></a>
+
+					
+					<!-- Main Page Contents Start -->
+					
+
+					
+					
+			
+					
+
+
+<form name="aspnetForm" method="post">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+
+<script src="/WebResource.axd?d=x2nkrMJGXkMELz33nwnakOULBdUi8ZrehokNunhauO29fg_hDwzWrrydB-L3tqh2NxgwAQRTHG5XlZPipP5vHft4T8w1&amp;t=636059168515692008" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="47897F27" />
+</div>
+
+<div id="Q" class="container-entry container-question">
+
+<div id="T" class="text fixed">
+	
+	<div class="clearfix">
+		
+		<div id="ctl00_ctl00_MC_QARow" class="mainlinks">
+            <div class="float-left">
+			    <a id="ctl00_ctl00_MC_AskQ" class="button compose" href="/Questions/ask.aspx">Ask a Question</a>
+            </div>
+			<div class="navigation float-right">
+				<a id="ctl00_ctl00_MC_Latest" href="/script/Answers/List.aspx?tab=active">All<span class="desktop-only"> Questions</span></a>
+				<a id="ctl00_ctl00_MC_Unansw" href="/script/Answers/List.aspx?tab=unanswered"><span class="desktop-only">All </span>Unanswered</a> 
+				
+				<a id="ctl00_ctl00_MC_Help" class="faq" href="/KB/FAQs/QuickAnswersFAQ.aspx">FAQ</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="contentdiv">
+	
+	<!-- Main Page Contents Start -->
+	
+
+<script type="text/javascript">
+function ConfirmDelete() { return window.confirm("Are you sure you want to delete this item?"); }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<a name="_articleTop"></a>
+
+
+<div class="float-right" style="width:150px">
+	
+</div>
+
+<div class="question">
+
+
+<div class="header">
+	<a id="ctl00_ctl00_MC_AMC_TitleLink" class="header tight padded-top" href="/Questions/226294/Draw-a-filled-Rectangle"><h1 id="ctl00_ctl00_MC_AMC_ItemTitle">Draw a filled Rectangle using OpenGL</h1></a>
+</div>
+
+<div id="CC" class="container-content">
+
+	
+	<div class="container-question clearfix extended">
+
+		<div class="rate-group">
+
+			
+			<div class="rate-item">
+				<div id="ctl00_ctl00_MC_AMC_RatePost_RateItemWrapper" class="container-rating small-text" name="RateItem_226294">
+
+	<table width="100%" cellpadding="0" cellspacing="0" class="small-text">
+	<tr>
+		<td id="ctl00_ctl00_MC_AMC_RatePost_VoteResultDiv" class="rating-result align-right">
+			<span class="align-right"></span>
+			<img class="loaderImg" width="16px" alt="loading..." height="16px" 
+				src="/images/animated_loading_blue.gif" style="display:none;" /> 
+		</td>
+
+	
+		<td class="voteTbl" style="white-space:nowrap" align="right">
+			<table class="small-text">
+			<tr>
+				<td id="ctl00_ctl00_MC_AMC_RatePost_RateText" class="rating-prompt">
+					Rate this:
+				</td>
+
+				
+				<td id="ctl00_ctl00_MC_AMC_RatePost_VoteFormDiv" class="nowrap rating-stars-voter-medium">
+					
+
+<table cellpadding="0" cellspacing="0" class="content float-left">
+<tr>
+	
+	<td class="nowrap">
+
+		<span id="ctl00_ctl00_MC_AMC_RatePost_ItemRating_VI">
+		<div class="rating-stars-medium">
+	<img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/stars-empty-md.png" width="80" height="16" />
+</div>
+		</span>
+
+		
+	</td>
+	
+	<td id="ctl00_ctl00_MC_AMC_RatePost_ItemRating_VR" class="nowrap">
+		&nbsp;
+		<span id="ctl00_ctl00_MC_AMC_RatePost_ItemRating_VotesR"></span>
+		
+	</td>
+
+</tr>
+
+</table>
+
+
+					<span id="ctl00_ctl00_MC_AMC_RatePost_RB" class="tooltip ajaxHist radio voting">
+						<span id="ctl00_ctl00_MC_AMC_RatePost_VoteRBL"><input id="ctl00_ctl00_MC_AMC_RatePost_VoteRBL_0" type="radio" name="ctl00$ctl00$MC$AMC$RatePost$VoteRBL" value="1" /><input id="ctl00_ctl00_MC_AMC_RatePost_VoteRBL_1" type="radio" name="ctl00$ctl00$MC$AMC$RatePost$VoteRBL" value="2" /><input id="ctl00_ctl00_MC_AMC_RatePost_VoteRBL_2" type="radio" name="ctl00$ctl00$MC$AMC$RatePost$VoteRBL" value="3" /><input id="ctl00_ctl00_MC_AMC_RatePost_VoteRBL_3" type="radio" name="ctl00$ctl00$MC$AMC$RatePost$VoteRBL" value="4" /><input id="ctl00_ctl00_MC_AMC_RatePost_VoteRBL_4" type="radio" name="ctl00$ctl00$MC$AMC$RatePost$VoteRBL" value="5" /></span> 
+
+						
+					</span>
+
+				</td>
+
+				
+				<td style="padding-left:5px">	
+					<input type="submit" name="ctl00$ctl00$MC$AMC$RatePost$SubmitRateBtn" value="Vote!" id="ctl00_ctl00_MC_AMC_RatePost_SubmitRateBtn" class="button" />
+				</td>
+			</tr>
+			</table>
+			
+		</td>
+	</tr>
+	</table>
+	<div class="hover-container">
+		
+        <div id="ctl00_ctl00_MC_AMC_RatePost_RSU" class="rating-comment align-left float-right">
+            <div class="padded">
+            Please <a id="ctl00_ctl00_MC_AMC_RatePost_SignUp" href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle">Sign up or sign in</a> to vote.
+            </div>
+        </div>
+	</div>
+</div>
+			</div>
+
+			
+			<div id="ctl00_ctl00_MC_AMC_CurRat" class="float-right" style="margin-top:3px;width:100px" name="CurRat_226294">
+				
+					
+			</div>
+
+		</div>
+
+		
+		<div class="tags">
+			<span id="ctl00_ctl00_MC_AMC_TagsListCtrl_TagWrp" class="medium-text">
+	
+	<span id="ctl00_ctl00_MC_AMC_TagsListCtrl_TagLabel" class="bold">See more:</span>
+	
+	<span id="ctl00_ctl00_MC_AMC_TagsListCtrl_VisibleTags"><span class="t"><a href="/script/Answers/List.aspx?tab=active&tags=4">VC6</a></span> <span class="t"><a href="/script/Answers/List.aspx?tab=active&tags=78">C++</a></span> <span class="t"><a href="/script/Answers/List.aspx?tab=active&tags=113">OpenGL</a></span> </span> 
+
+	
+	
+</span>
+
+		</div>
+
+		<div style="margin-top:25px">
+			I want to draw a filled rectangle in vC6 using OPENGL..<br />pls help me with this
+		</div>
+	</div>
+
+</div>
+
+<div class="qa-info clearfix">
+	<div class="small-text commands float-right">
+	
+
+		
+		
+	</div>	
+
+	
+	<div class="column">
+		<strong>Posted</strong> 15-Jul-11 1:41am
+<div class="member-rep-container">
+	<a id="ctl00_ctl00_MC_AMC_QuestionAuthorRepInfo_MemberName" href="/script/Membership/View.aspx?mid=7939136">Sona from kerala</a><span id="ctl00_ctl00_MC_AMC_QuestionAuthorRepInfo_TotalPoints" title="Total reputation points" class="member-rep-box bronze">471</span>
+</div>
+
+	</div>
+
+	
+	
+	<div class="column" style="margin-left:10px">
+		<b>Updated</b> 15-Jul-11 2:32am
+<div class="member-rep-container">
+	<a id="ctl00_ctl00_MC_AMC_QuestionEditorRepInfo_MemberName" href="/script/Membership/View.aspx?mid=1778670">CPallini</a><span id="ctl00_ctl00_MC_AMC_QuestionEditorRepInfo_TotalPoints" title="Total reputation points" class="member-rep-box platinum bold">399K</span>
+</div>
+
+	</div>
+
+	
+	<div class="version"><a href="/script/Articles/ListVersions.aspx?aid=226294">v2</a></div>
+	
+</div>
+
+
+
+
+<div class="spaced padded-top">
+	<a id="ctl00_ctl00_MC_AMC_AddChild1" class="button large anchorLink" href="/Questions/226294/answer.aspx">Add a Solution</a>
+</div>
+
+
+<a id="ctl00_ctl00_MC_AMC_QuestionComments_ContainerPermalink" class="CommentAnchor" name="cmt2_226294"></a>
+
+<div id="ctl00_ctl00_MC_AMC_QuestionComments_CommentContainer" class="container-comments" ObjectRef="2_226294_2" PageNumber="0" PageSize="0" BoldMemberId="7939136" CurrentMemberId="0" ModifyStatus="False">	 
+
+	
+	
+
+	
+	<div name="CP-CommentList" class="comment-list">
+		
+	</div> 
+
+	 
+	
+
+	  
+
+</div> 
+
+
+</div>
+
+
+
+
+<div class="QATopPager">
+	
+</div>
+
+
+<div class="answer-list-header row">
+    <div class="float-left">
+        <h2 id="ctl00_ctl00_MC_AMC_AnswerCount" class="tight">3 solutions</h2>
+    </div>
+    <div class="float-right" style="margin-top: 15px;">
+	    <ul class="ui-tabs-nav ui-helper-reset ui-corner-all clearfix">
+	<li id="ctl00_ctl00_MC_AMC_TabsCtrl_TabsRpt_ctl01_LI" class="ui-corner-top ui-tabs-selected">
+		<a id="ctl00_ctl00_MC_AMC_TabsCtrl_TabsRpt_ctl01_TL" title="Best rated answers" class="ui-corner-top">
+			<span>Top Rated</span>
+		</a>
+		
+	</li>
+
+	<li id="ctl00_ctl00_MC_AMC_TabsCtrl_TabsRpt_ctl02_LI" class="ui-corner-top ">
+		<a id="ctl00_ctl00_MC_AMC_TabsCtrl_TabsRpt_ctl02_TL" title="Newest answers posted to this question" class="ui-corner-top" href="/Questions/226294/Draw-a-filled-Rectangle?tab=mostrecent">
+			<span>Most Recent</span>
+		</a>
+		
+	</li>
+</ul>
+
+    </div>
+</div>
+
+<div class="ui-tabs-panel tight">
+	
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_AnswerGroup" class="answer-row answer first">
+
+
+<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_Header" class="header container accepted-community">
+
+	
+	
+	<div class="rate-group">
+
+		<div class="rate-item">
+			<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RateItemWrapper" class="container-rating small-text" name="RateItem_226299">
+
+	<table width="100%" cellpadding="0" cellspacing="0" class="small-text">
+	<tr>
+		<td id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteResultDiv" class="rating-result align-right">
+			<span class="align-right"></span>
+			<img class="loaderImg" width="16px" alt="loading..." height="16px" 
+				src="/images/animated_loading_blue.gif" style="display:none;" /> 
+		</td>
+
+	
+		<td class="voteTbl" style="white-space:nowrap" align="right">
+			<table class="small-text">
+			<tr>
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RateText" class="rating-prompt">
+					Rate this:
+				</td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_StartForm" align="right" nowrap="nowrap"><img class="align-middle" src="/script/Ratings/Images/thmbdn.png" width="16px" height="16px" alt="bad" /></td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteFormDiv" class="nowrap rating-stars-voter-medium">
+					
+
+<table cellpadding="0" cellspacing="0" class="content float-left">
+<tr>
+	
+	<td class="nowrap">
+
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_ItemRating_VI">
+		<div class="nowrap rating-stars-medium" style="height:18px;width:80px;position:relative;">
+	<div class="clipped align-left float-left" style="height:16px;width:80px;">
+		<img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/stars-fill-md.png" style="border-width:0px;" />
+	</div><div class="clipped" style="height:16px;width:0px;position:relative;">
+		<img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/stars-empty-md.png" style="border-width:0px;position:absolute;top:0;right:0;" />
+	</div>
+</div>
+		</span>
+
+		
+	</td>
+	
+	<td id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_ItemRating_VR" class="nowrap">
+		&nbsp;
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_ItemRating_VotesR"></span>
+		
+	</td>
+
+</tr>
+
+</table>
+
+
+					<span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RB" class="tooltip ajaxHist radio voting">
+						<span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteRBL"><input id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteRBL_0" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl00$A$RatePost$VoteRBL" value="1" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteRBL_1" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl00$A$RatePost$VoteRBL" value="2" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteRBL_2" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl00$A$RatePost$VoteRBL" value="3" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteRBL_3" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl00$A$RatePost$VoteRBL" value="4" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteRBL_4" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl00$A$RatePost$VoteRBL" value="5" /></span> 
+
+						
+						<div class="speech-bubble-container-up-right" 
+							style="width:200px;margin-top:24px;right:-90px;top:6px">
+							<div class="speech-bubble-up">
+								<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_Histogram">
+
+</div><img id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_Loading" class="align-middle" src="/images/animated_loading.gif" style="border-width:0px;" />
+							</div>
+							<div class="speech-bubble-pointer-up">
+								<div class="speech-bubble-pointer-up-inner"></div>
+							</div>
+						</div>
+						
+					</span>
+
+				</td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_EndForm" align="left"><img class="align-middle" src="/script/Ratings/Images/thmbup.png" width="16px" height="16px" alt="good" /></td>
+
+				<td style="padding-left:5px">	
+					<input type="submit" name="ctl00$ctl00$MC$AMC$Answers$ctl00$A$RatePost$SubmitRateBtn" value="Vote!" id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_SubmitRateBtn" class="button" />
+				</td>
+			</tr>
+			</table>
+			
+		</td>
+	</tr>
+	</table>
+	<div class="hover-container">
+		
+        <div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RSU" class="rating-comment align-left float-right">
+            <div class="padded">
+            Please <a id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_SignUp" href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle">Sign up or sign in</a> to vote.
+            </div>
+        </div>
+	</div>
+</div>
+		</div>
+
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CurRat" class="align-right float-right" style="display:inline-block;margin-top:3px;width:100px" name="CurRat_226299">
+			
+			
+		</div>
+	</div>
+	
+
+	
+	<h2 id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_Title" class="float-left" style="margin:-10px 0 0 5px">Solution 1</h2><a id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_Heading" name="answer1"></a>
+
+	
+	<div class="float-left" style="margin:3px 0 0 20px">
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_Accept" title="Mark this solution as an accepted solution." class="button safe" style="display:none;">AcceptÂ Solution</a>
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_Unaccept" title="Revoke accepted solution designation." class="button unsafe" style="display:none;">RejectÂ Solution</a>
+	</div>
+
+	<p id="AcceptError" class="error" style="display:none"></p>
+		
+	
+	
+</div>
+
+
+<div class="text">This is such a common requirement for OpenGL that they have provided the <code>glRect</code> that does exactly this. Microsoft have provided several <a href="http://msdn.microsoft.com/en-us/library/dd374025(v=vs.85).aspx">versions of this function</a>[<a href="http://msdn.microsoft.com/en-us/library/dd374025(v=vs.85).aspx" target="_blank" title="New Window">^</a>] that take different data types to specify the bounds of the rectangle.</div>
+
+<div></div>
+
+<div class="qa-info clearfix">
+	
+	<div class="float-right commands">
+
+		
+		&nbsp;
+		<a id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_Permalink" rel="nofollow" href="/Answers/226299/Draw-a-filled-Rectangle">Permalink</a>
+		&nbsp;
+		 
+
+		
+
+    	
+	
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_ReportItem_StatusMsg" class="tiny-text" style="display:none"></span>
+
+
+
+
+
+
+		
+	</div>
+	
+	
+	<div class="meta-data">
+		<b>Posted</b> 15-Jul-11 1:50am
+		
+<div class="member-rep-container">
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_AuthorRepInfo_MemberName" href="/script/Membership/View.aspx?mid=213147">Pete O'Hanlon</a><span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_AuthorRepInfo_TotalPoints" title="Total reputation points" class="member-rep-box platinum bold">637.6K</span>
+</div>
+
+	</div>
+
+	
+	
+
+	
+	
+
+	
+	
+</div>
+
+   
+
+<div style="clear:both"></div>
+
+
+<a id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_ContainerPermalink" class="CommentAnchor" name="cmt2_226299"></a>
+<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_ComHdr" class="comment-header">Comments</div>
+<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentContainer" class="container-comments" ObjectRef="2_226299_1" PageNumber="0" PageSize="0" BoldMemberId="213147" CurrentMemberId="0" ModifyStatus="False">	 
+
+	
+	
+
+	
+	<div name="CP-CommentList" class="comment-list">
+		
+
+
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl00_CR_CommentItem" class="comment-item clearfix hover-row first" commentId="130693" authorId="1778670">
+
+	<div class="comment-author"><a href="/script/Membership/View.aspx?mid=1778670" id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl00_CR_MemberLink">CPallini</a>
+        <span id="cmt-jump-130693"></span>
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl00_CR_DatePosted">15-Jul-11 7:29am</span> 
+		
+	</div>
+	<div class="comment-commands">
+		&nbsp; &nbsp; 
+		
+	
+		<div class="float-right">
+			
+			
+
+			
+
+			
+		</div>
+
+	</div>	
+	<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl00_CR_CommentContent" class="comment-content">OK, but...<i>Please</i> see my answer<br />:-)</div>
+
+
+	<div id="EditDialogPlaceholder"></div>
+	<div id="ReplyDialogPlaceholder"></div>
+
+</div>
+
+	
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl01_CR_CommentItem" class="comment-item clearfix hover-row mine" commentId="130709" authorId="213147" style="padding-left:16px;">
+
+	<div class="comment-author"><a href="/script/Membership/View.aspx?mid=213147" id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl01_CR_MemberLink">Pete O&#39;Hanlon</a>
+        <span id="cmt-jump-130709"></span>
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl01_CR_DatePosted">15-Jul-11 8:10am</span> 
+		
+	</div>
+	<div class="comment-commands">
+		&nbsp; &nbsp; 
+		
+	
+		<div class="float-right">
+			
+			
+
+			
+
+			
+		</div>
+
+	</div>	
+	<div id="ctl00_ctl00_MC_AMC_Answers_ctl00_A_CommentCtrlObj_CommentsList_List_ctl01_CR_CommentContent" class="comment-content">lol</div>
+
+
+	<div id="EditDialogPlaceholder"></div>
+	<div id="ReplyDialogPlaceholder"></div>
+
+</div>
+
+	
+
+
+
+	</div> 
+
+	 
+	
+
+	  
+
+</div> 
+
+
+</div>
+
+
+
+
+
+	
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_AnswerGroup" class="answer-row answer">
+
+
+<div id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_Header" class="header container">
+
+	
+	
+	<div class="rate-group">
+
+		<div class="rate-item">
+			<div id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RateItemWrapper" class="container-rating small-text" name="RateItem_226437">
+
+	<table width="100%" cellpadding="0" cellspacing="0" class="small-text">
+	<tr>
+		<td id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteResultDiv" class="rating-result align-right">
+			<span class="align-right"></span>
+			<img class="loaderImg" width="16px" alt="loading..." height="16px" 
+				src="/images/animated_loading_blue.gif" style="display:none;" /> 
+		</td>
+
+	
+		<td class="voteTbl" style="white-space:nowrap" align="right">
+			<table class="small-text">
+			<tr>
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RateText" class="rating-prompt">
+					Rate this:
+				</td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_StartForm" align="right" nowrap="nowrap"><img class="align-middle" src="/script/Ratings/Images/thmbdn.png" width="16px" height="16px" alt="bad" /></td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteFormDiv" class="nowrap rating-stars-voter-medium">
+					
+
+<table cellpadding="0" cellspacing="0" class="content float-left">
+<tr>
+	
+	<td class="nowrap">
+
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_ItemRating_VI">
+		<div class="rating-stars-medium">
+	<img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/stars-empty-md.png" width="80" height="16" />
+</div>
+		</span>
+
+		
+	</td>
+	
+	<td id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_ItemRating_VR" class="nowrap">
+		&nbsp;
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_ItemRating_VotesR"></span>
+		
+	</td>
+
+</tr>
+
+</table>
+
+
+					<span id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RB" class="tooltip ajaxHist radio voting">
+						<span id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteRBL"><input id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteRBL_0" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl01$A$RatePost$VoteRBL" value="1" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteRBL_1" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl01$A$RatePost$VoteRBL" value="2" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteRBL_2" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl01$A$RatePost$VoteRBL" value="3" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteRBL_3" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl01$A$RatePost$VoteRBL" value="4" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteRBL_4" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl01$A$RatePost$VoteRBL" value="5" /></span> 
+
+						
+					</span>
+
+				</td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_EndForm" align="left"><img class="align-middle" src="/script/Ratings/Images/thmbup.png" width="16px" height="16px" alt="good" /></td>
+
+				<td style="padding-left:5px">	
+					<input type="submit" name="ctl00$ctl00$MC$AMC$Answers$ctl01$A$RatePost$SubmitRateBtn" value="Vote!" id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_SubmitRateBtn" class="button" />
+				</td>
+			</tr>
+			</table>
+			
+		</td>
+	</tr>
+	</table>
+	<div class="hover-container">
+		
+        <div id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RSU" class="rating-comment align-left float-right">
+            <div class="padded">
+            Please <a id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_SignUp" href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle">Sign up or sign in</a> to vote.
+            </div>
+        </div>
+	</div>
+</div>
+		</div>
+
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_CurRat" class="align-right float-right" style="display:inline-block;margin-top:3px;width:100px" name="CurRat_226437">
+			
+			
+		</div>
+	</div>
+	
+
+	
+	<h2 id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_Title" class="float-left" style="margin:-10px 0 0 5px">Solution 2</h2><a id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_Heading" name="answer2"></a>
+
+	
+	<div class="float-left" style="margin:3px 0 0 20px">
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_Accept" title="Mark this solution as an accepted solution." class="button safe" style="display:none;">AcceptÂ Solution</a>
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_Unaccept" title="Revoke accepted solution designation." class="button unsafe" style="display:none;">RejectÂ Solution</a>
+	</div>
+
+	<p id="AcceptError" class="error" style="display:none"></p>
+		
+	
+	
+</div>
+
+
+<div class="text">Using GLUT, the following code will do this:<br />(you may need to aquire glut or freeglut to be able to compile this. The alternative, just using a frame/dialog based app and your own code to setup the window, process the keys, handle idle times, handle resizing etc, etc is quite long-winded. glut or freeGlut are a much easier learning curve)<br />This code could be trimmed further, though will be left as an exercise to the reader..<br /><br /><pre lang="cs">#include &lt;GL/glut.h&gt;
+#include &lt;stdlib.h&gt;
+
+<span class="code-comment">/*</span><span class="code-comment"> GLUT callback Handlers */</span>
+<span class="code-keyword">static</span> <span class="code-keyword">void</span> resize(<span class="code-keyword">int</span> width, <span class="code-keyword">int</span> height)
+{
+    <span class="code-keyword">const</span> <span class="code-keyword">float</span> ar = (<span class="code-keyword">float</span>) width / (<span class="code-keyword">float</span>) height;
+
+    glViewport(<span class="code-digit">0</span>, <span class="code-digit">0</span>, width, height);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glFrustum(-ar, ar, -1.<span class="code-digit">0</span>, <span class="code-digit">1</span>.<span class="code-digit">0</span>, <span class="code-digit">2</span>.<span class="code-digit">0</span>, <span class="code-digit">100</span>.<span class="code-digit">0</span>);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity() ;
+}
+
+<span class="code-keyword">static</span> <span class="code-keyword">void</span> display(<span class="code-keyword">void</span>)
+{
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glBegin(GL_QUADS);
+        glColor3d(<span class="code-digit">1</span>,<span class="code-digit">0</span>,<span class="code-digit">0</span>);
+        glVertex3f(-1,-1,-10);
+        glColor3d(<span class="code-digit">1</span>,<span class="code-digit">1</span>,<span class="code-digit">0</span>);
+        glVertex3f(<span class="code-digit">1</span>,-1,-10);
+        glColor3d(<span class="code-digit">1</span>,<span class="code-digit">1</span>,<span class="code-digit">1</span>);
+        glVertex3f(<span class="code-digit">1</span>,<span class="code-digit">1</span>,-10);
+        glColor3d(<span class="code-digit">0</span>,<span class="code-digit">1</span>,<span class="code-digit">1</span>);
+        glVertex3f(-1,<span class="code-digit">1</span>,-10);
+    glEnd();
+    glutSwapBuffers();
+}
+
+
+<span class="code-keyword">static</span> <span class="code-keyword">void</span> key(unsigned <span class="code-keyword">char</span> key, <span class="code-keyword">int</span> x, <span class="code-keyword">int</span> y)
+{
+    <span class="code-keyword">switch</span> (key)
+    {
+        <span class="code-keyword">case</span> <span class="code-digit">27</span> :
+        <span class="code-keyword">case</span> <span class="code-string">'</span><span class="code-string">q'</span>:
+            exit(<span class="code-digit">0</span>);
+            <span class="code-keyword">break</span>;
+    }
+    glutPostRedisplay();
+}
+
+<span class="code-keyword">static</span> <span class="code-keyword">void</span> idle(<span class="code-keyword">void</span>)
+{
+    glutPostRedisplay();
+}
+
+<span class="code-comment">/*</span><span class="code-comment"> Program entry point */</span>
+<span class="code-keyword">int</span> main(<span class="code-keyword">int</span> argc, <span class="code-keyword">char</span> *argv[])
+{
+    glutInit(&amp;argc, argv);
+    glutInitWindowSize(<span class="code-digit">640</span>,<span class="code-digit">480</span>);
+    glutInitWindowPosition(<span class="code-digit">10</span>,<span class="code-digit">10</span>);
+    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
+
+    glutCreateWindow(<span class="code-string">"</span><span class="code-string">GLUT quadPoly"</span>);
+
+    glutReshapeFunc(resize);
+    glutDisplayFunc(display);
+    glutKeyboardFunc(key);
+    glutIdleFunc(idle);
+
+    glClearColor(<span class="code-digit">0</span>,<span class="code-digit">0</span>,<span class="code-digit">0</span>,<span class="code-digit">0</span>);
+
+    glutMainLoop();
+
+    <span class="code-keyword">return</span> EXIT_SUCCESS;
+}</pre><br /><br />A few tutes - <a href="http://www.codecolony.de/OpenGL/">http://www.codecolony.de/OpenGL/</a>[<a href="http://www.codecolony.de/OpenGL/" target="_blank" title="New Window">^</a>]<br />I would have recomended NEHE's openGL tutes too, though I seem unable to access them for some period now. Perhaps you could access a google-cached version of the page<br /><br />Here's another page with a go-to-whoa! set of tutes. My apologies for the title of the site. <a href="http://mindfuck.de-brauwer.be/articles.php">OpenGl tutes</a>[<a href="http://mindfuck.de-brauwer.be/articles.php" target="_blank" title="New Window">^</a>]<br /><br />Look for the Red Book, the Blue Book or the Orange Book (start with the red one)<br />There's also a number of articles here on CP for that. Curiously enough, the search term "openGL tute" run through google brings up<br /><br />[EDIT:] It seems that Nehe's site was suffering database problems, though is now back online. I highly reccomend his series of 48 tutes. Start at the beginning and work your way through them. GLAUX is rather old in the tooth now, though is mostly used for image-loading routines. Just get a bmp or tga loader and you'll be able to do without it for the most part. <a href="http://nehe.gamedev.net/">NEHE openGL tutes</a>[<a href="http://nehe.gamedev.net/" target="_blank" title="New Window">^</a>]</div>
+
+<div></div>
+
+<div class="qa-info clearfix">
+	
+	<div class="float-right commands">
+
+		
+		&nbsp;
+		<a id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_Permalink" rel="nofollow" href="/Answers/226437/Draw-a-filled-Rectangle-using-OpenGL">Permalink</a>
+		&nbsp;
+		 
+
+		
+
+    	
+	
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_ReportItem_StatusMsg" class="tiny-text" style="display:none"></span>
+
+
+
+
+
+
+		
+	</div>
+	
+	
+	<div class="meta-data">
+		<b>Posted</b> 15-Jul-11 6:04am
+		
+<div class="member-rep-container">
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_AuthorRepInfo_MemberName" href="/script/Membership/View.aspx?mid=3311273">enhzflep</a><span id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_AuthorRepInfo_TotalPoints" title="Total reputation points" class="member-rep-box platinum bold">45.6K</span>
+</div>
+
+	</div>
+
+	
+	
+	<div class="meta-data" style="margin-left:15px">
+		<b>Updated</b> 15-Jul-11 8:36am
+	</div>
+	
+
+	
+	<div class="version"><a href="/script/Articles/ListVersions.aspx?aid=226437">v2</a></div>
+
+	
+	
+</div>
+
+   
+
+<div style="clear:both"></div>
+
+
+<a id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_CommentCtrlObj_ContainerPermalink" class="CommentAnchor" name="cmt2_226437"></a>
+
+<div id="ctl00_ctl00_MC_AMC_Answers_ctl01_A_CommentCtrlObj_CommentContainer" class="container-comments" ObjectRef="2_226437_2" PageNumber="0" PageSize="0" BoldMemberId="3311273" CurrentMemberId="0" ModifyStatus="False">	 
+
+	
+	
+
+	
+	<div name="CP-CommentList" class="comment-list">
+		
+	</div> 
+
+	 
+	
+
+	  
+
+</div> 
+
+
+</div>
+
+
+
+
+
+	
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_AnswerGroup" class="answer-row answer">
+
+
+<div id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_Header" class="header container">
+
+	
+	
+	<div class="rate-group">
+
+		<div class="rate-item">
+			<div id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RateItemWrapper" class="container-rating small-text" name="RateItem_607389">
+
+	<table width="100%" cellpadding="0" cellspacing="0" class="small-text">
+	<tr>
+		<td id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteResultDiv" class="rating-result align-right">
+			<span class="align-right"></span>
+			<img class="loaderImg" width="16px" alt="loading..." height="16px" 
+				src="/images/animated_loading_blue.gif" style="display:none;" /> 
+		</td>
+
+	
+		<td class="voteTbl" style="white-space:nowrap" align="right">
+			<table class="small-text">
+			<tr>
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RateText" class="rating-prompt">
+					Rate this:
+				</td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_StartForm" align="right" nowrap="nowrap"><img class="align-middle" src="/script/Ratings/Images/thmbdn.png" width="16px" height="16px" alt="bad" /></td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteFormDiv" class="nowrap rating-stars-voter-medium">
+					
+
+<table cellpadding="0" cellspacing="0" class="content float-left">
+<tr>
+	
+	<td class="nowrap">
+
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_ItemRating_VI">
+		<div class="nowrap rating-stars-medium" style="height:18px;width:80px;position:relative;">
+	<div class="clipped align-left float-left" style="height:16px;width:16px;">
+		<img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/stars-fill-md.png" style="border-width:0px;" />
+	</div><div class="clipped" style="height:16px;width:64px;position:relative;">
+		<img src="https://codeproject.global.ssl.fastly.net/script/Ratings/Images/stars-empty-md.png" style="border-width:0px;position:absolute;top:0;right:0;" />
+	</div>
+</div>
+		</span>
+
+		
+	</td>
+	
+	<td id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_ItemRating_VR" class="nowrap">
+		&nbsp;
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_ItemRating_VotesR"></span>
+		
+	</td>
+
+</tr>
+
+</table>
+
+
+					<span id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RB" class="tooltip ajaxHist radio voting">
+						<span id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteRBL"><input id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteRBL_0" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl02$A$RatePost$VoteRBL" value="1" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteRBL_1" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl02$A$RatePost$VoteRBL" value="2" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteRBL_2" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl02$A$RatePost$VoteRBL" value="3" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteRBL_3" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl02$A$RatePost$VoteRBL" value="4" /><input id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteRBL_4" type="radio" name="ctl00$ctl00$MC$AMC$Answers$ctl02$A$RatePost$VoteRBL" value="5" /></span> 
+
+						
+						<div class="speech-bubble-container-up-right" 
+							style="width:200px;margin-top:24px;right:-90px;top:6px">
+							<div class="speech-bubble-up">
+								<div id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_Histogram">
+
+</div><img id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_Loading" class="align-middle" src="/images/animated_loading.gif" style="border-width:0px;" />
+							</div>
+							<div class="speech-bubble-pointer-up">
+								<div class="speech-bubble-pointer-up-inner"></div>
+							</div>
+						</div>
+						
+					</span>
+
+				</td>
+
+				<td id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_EndForm" align="left"><img class="align-middle" src="/script/Ratings/Images/thmbup.png" width="16px" height="16px" alt="good" /></td>
+
+				<td style="padding-left:5px">	
+					<input type="submit" name="ctl00$ctl00$MC$AMC$Answers$ctl02$A$RatePost$SubmitRateBtn" value="Vote!" id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_SubmitRateBtn" class="button" />
+				</td>
+			</tr>
+			</table>
+			
+		</td>
+	</tr>
+	</table>
+	<div class="hover-container">
+		
+        <div id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RSU" class="rating-comment align-left float-right">
+            <div class="padded">
+            Please <a id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_SignUp" href="https://www.codeproject.com/script/Membership/LogOn.aspx?rp=%2fQuestions%2f226294%2fDraw-a-filled-Rectangle">Sign up or sign in</a> to vote.
+            </div>
+        </div>
+	</div>
+</div>
+		</div>
+
+		<div id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_CurRat" class="align-right float-right" style="display:inline-block;margin-top:3px;width:100px" name="CurRat_607389">
+			
+			
+		</div>
+	</div>
+	
+
+	
+	<h2 id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_Title" class="float-left" style="margin:-10px 0 0 5px">Solution 3</h2><a id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_Heading" name="answer3"></a>
+
+	
+	<div class="float-left" style="margin:3px 0 0 20px">
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_Accept" title="Mark this solution as an accepted solution." class="button safe" style="display:none;">AcceptÂ Solution</a>
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_Unaccept" title="Revoke accepted solution designation." class="button unsafe" style="display:none;">RejectÂ Solution</a>
+	</div>
+
+	<p id="AcceptError" class="error" style="display:none"></p>
+		
+	
+	
+</div>
+
+
+<div class="text">I'm years late to the party, but since this is the first google result, I thought it'd be best to have a no hassle solution.<br /><br />For just a solid red rectangle (in my version, x, y, w(idth), and h(eight) variables are assumed to exist. YMMV):<br /><pre lang="c++"><span class="code-keyword">unsigned</span> <span class="code-keyword">int</span> rgba = 0xff0000ff; <span class="code-comment">//</span><span class="code-comment"> red, no alpha</span>
+glBegin(GL_QUADS);
+glColor4f(((rgba&gt;&gt;24)&amp;0xff)/255.0f,
+          ((rgba&gt;&gt;16)&amp;0xff)/255.0f, 
+          ((rgba&gt;&gt;8)&amp;0xff)/255.0f,
+          (rgba&amp;0xff)/255.0f);
+glVertex3f(x,y,<span class="code-digit">0</span>);
+glVertex3f(x+w,y,<span class="code-digit">0</span>);
+glVertex3f(x+w,y+h,<span class="code-digit">0</span>);
+glVertex3f(x,y+h,<span class="code-digit">0</span>);
+glEnd();
+glColor4f(<span class="code-digit">1</span>, <span class="code-digit">1</span>, <span class="code-digit">1</span>, <span class="code-digit">1</span>);</pre><br /><br />The third line will allow any color in an 0xRRGGBBAA format.<br />The last line exists purely so your color change doesn't leak into subsequent renders. (it will)</div>
+
+<div></div>
+
+<div class="qa-info clearfix">
+	
+	<div class="float-right commands">
+
+		
+		&nbsp;
+		<a id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_Permalink" rel="nofollow" href="/Answers/607389/DrawplusaplusfilledplusRectangleplususingplusOpenG">Permalink</a>
+		&nbsp;
+		 
+
+		
+
+    	
+	
+		<span id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_ReportItem_StatusMsg" class="tiny-text" style="display:none"></span>
+
+
+
+
+
+
+		
+	</div>
+	
+	
+	<div class="meta-data">
+		<b>Posted</b> 16-Jun-13 14:29pm
+		
+<div class="member-rep-container">
+	<a id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_AuthorRepInfo_MemberName" href="/script/Membership/View.aspx?mid=986186">sarysa</a><span id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_AuthorRepInfo_TotalPoints" title="Total reputation points" class="member-rep-box bronze">111</span>
+</div>
+
+	</div>
+
+	
+	
+	<div class="meta-data" style="margin-left:15px">
+		<b>Updated</b> 16-Jun-13 14:30pm
+	</div>
+	
+
+	
+	<div class="version"><a href="/script/Articles/ListVersions.aspx?aid=607389">v2</a></div>
+
+	
+	
+</div>
+
+   
+
+<div style="clear:both"></div>
+
+
+<a id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_CommentCtrlObj_ContainerPermalink" class="CommentAnchor" name="cmt2_607389"></a>
+
+<div id="ctl00_ctl00_MC_AMC_Answers_ctl02_A_CommentCtrlObj_CommentContainer" class="container-comments" ObjectRef="2_607389_2" PageNumber="0" PageSize="0" BoldMemberId="986186" CurrentMemberId="0" ModifyStatus="False">	 
+
+	
+	
+
+	
+	<div name="CP-CommentList" class="comment-list">
+		
+	</div> 
+
+	 
+	
+
+	  
+
+</div> 
+
+
+</div>
+
+
+
+
+
+	
+</div>
+
+
+
+		
+
+<div class="padded-top">
+<a id="ctl00_ctl00_MC_AMC_AddChild2" class="button large" href="/Questions/226294/answer.aspx">Add a Solution</a>
+</div>
+
+
+
+
+<div id="NewEntryGroup" class="container" style="display:none;">
+	
+
+<div id="PostEntryContainer" class="AnswersPost">
+
+
+<h2 id="ctl00_ctl00_MC_AMC_PostEntryObj_NewEntryHeading" class="contrast1-color">Add your solution here</h2>
+
+
+<input name="ctl00$ctl00$MC$AMC$PostEntryObj$CustomValidationHook" type="text" id="ctl00_ctl00_MC_AMC_PostEntryObj_CustomValidationHook" style="display:none" />
+
+
+
+
+
+
+
+<div id="ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1" class="error callout" style="color:Red;display:none;">
+
+</div>
+
+
+
+<div class="container-post new-message">
+
+	<div class="inline">
+
+		
+		<p id="AjaxSubmitErrors" class="error callout" style="display:none"></p>
+
+		
+		
+
+		<a name="PostContent"></a>
+		
+		
+		
+
+		
+		<div class="clearfix">
+            
+
+<div id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_FormatBar" class="desktop-only tablet-only"><button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('b');return false;" title="Wrap the Selected Text in HTML bold Tags"><b>&nbsp;B&nbsp;</b></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('i');return false;" title="Wrap the Selected Text in HTML Italic Tags"><i>&nbsp;I&nbsp;</i></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('u');return false;" title="Wrap the Selected Text in HTML Underline Tags">&nbsp;<u>U</u>&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('strike');return false;" title="Wrap the Selected Text in HTML strike through Tags"><strike>&nbsp;S&nbsp;</strike></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('small');return false;" title="Wrap the Selected Text in HTML small Tags"><small>small</small></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('big');return false;" title="Wrap the Selected Text in HTML big Tags">BIG</button>
+<span class="tooltip"><button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre');return false;" title="Wrap the Selected Text in 'pre' Tags: For separate source code blocks"><tt style="background-color: #FBEDBB;">code</tt></button>
+<div class="tooltip-flyout small-text" style="width:135px !important"><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;text&quot;')">Plain Text</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;c++&quot;')">C++</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;CSS&quot;')">CSS</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;c#&quot;')">C#</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Delphi&quot;')">Delphi / Pascal</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;F#&quot;')">F#</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;HTML&quot;')">HTML / XML / ASP</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;java&quot;')">Java</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Javascript&quot;')">Javascript</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;objc&quot;')">Objective-C</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;SQL&quot;')">SQL</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Swift&quot;')">Swift</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Perl&quot;')">Perl</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;PHP&quot;')">PHP</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;Python&quot;')">Python</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;vb&quot;')">VB</a></div><div class="list-item"><a href='#' onclick="return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('pre','lang=&quot;xml&quot;')">XML</a></div></div></span><button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.toggleWrapSelection('code');return false;" title="Wrap the Selected Text in 'code' Tags: For code within sentences"><code>var</code></button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.insertText('&l' + 't;');return false;" title="Insert HTML Extended Character Code For <">&nbsp;&lt;&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.insertText('&g' + 't;');return false;" title="Insert HTML Extended Character Code For >">&nbsp;&gt;&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.insertText('&a' + 'mp;');return false;" title="Insert HTML Extended Character Code For &">&nbsp;&amp;&nbsp;</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.inLinkErAte(null, false);return false;" title="Convert URL to a hyperlink">link</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.inLinkErAte(null, true);return false;" title="Convert URL to a hyperlink with optional 'New Window' link">[^]</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.encoderate();return false;" title="HTML encode text">encode</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.untab();return false;" title="Replace tabs with spaces">untab</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.fixCase();return false;" title="Fix the casing of a sentence">case</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.adjustLeading(4);return false;" title="indent">indent</button>
+<button class="toolbar" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.adjustLeading(-4);return false;" title="outdent">outdent</button>
+</div>
+<div id="EditWrap" style="position:relative">
+	<table id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_EditContainer" cellpadding="0" cellspacing="0" class="container-editor">
+	<tr valign="top">
+		<td style="padding-right:15px;width:100%">
+		<textarea name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$MessageText" id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText" class="resizable text-editor" style="width:100%;height:250px;"></textarea>
+		
+	</td>
+	</tr>
+</table>
+
+
+</div>
+	<div id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_pasteDialog" class="paste-dialog invisible">
+
+		<div class="header"><a href="#" class="close-notify">OK</a>
+		Paste as</div>
+
+        <div class="padded">
+		<table id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting" class="small-text paste-options extended" border="0">
+	<tr>
+		<td><span Title="HTML markup will be removed from text" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;text&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_0" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="text" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;text&quot;);" tabindex="8" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_0">Strip HTML</label></span></td>
+	</tr><tr>
+		<td><span Title="Pasted text will automatically be HTML-encoded" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;encoded&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_1" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="encoded" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;encoded&quot;);" tabindex="8" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_1">Encode HTML</label></span></td>
+	</tr><tr>
+		<td><span Title="Clipboard will be pasted as-is, preserving HTML tags and entities." onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;html&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_2" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="html" checked="checked" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;html&quot;);" tabindex="8" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_2">Paste as-is</label></span></td>
+	</tr><tr>
+		<td><span Title="Clipboard text will be wrapped in PRE tags, and content HTML encoded, always" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;code&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_3" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="code" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;code&quot;);" tabindex="8" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_3">Code block</label></span></td>
+	</tr><tr>
+		<td><span Title="Clipboard text will be pasted within a quote block" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;quote&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_4" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="quote" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;quote&quot;);" tabindex="8" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_4">Quoted Text</label></span></td>
+	</tr><tr>
+		<td><span Title="Sniff pasted text to see if it contains code, and wrap in PRE blocks if it does" onmouseover="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;auto&quot;);" onmouseout="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.getPasteSetting());"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_5" type="radio" name="ctl00$ctl00$MC$AMC$PostEntryObj$Content$OnPasteSetting" value="auto" onclick="editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.previewPaste(&quot;auto&quot;);" tabindex="8" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting_5">Best guess</label></span></td>
+	</tr>
+</table>
+		</div>
+
+		<div id="expando" class="invisible">
+			<div class="header">To display as</div>
+			<table width="100%" cellpadding="0" cellspacing="0">
+			<tr><td class="MsgBd BdSel"><div id="pasteHtmlPreview" class="paste-preview"></div></td></tr>
+			</table>
+		</div>
+
+	</div>
+
+<script type="text/javascript">
+var editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content;
+$(document).ready(function() {
+    editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content = new TextEditor('#ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText', editorctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageTextConfig);
+    editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content.initialise();
+});
+</script><span id="ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal" style="color:Red;display:none;">The content must be at least 30 characters.</span>
+		</div>
+
+		
+        
+        
+
+		<div class="small-text padded-top">
+			<span class="small-text invisible"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml" type="checkbox" name="ctl00$ctl00$MC$AMC$PostEntryObj$IgnoreHtml" tabindex="6" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml">Treat my content as plain text, not as HTML</label></span>
+		</div>
+
+		
+		<h2>Preview <span id="refresh-count" style="display:none">0</span></h2>
+		<div id="Preview" class="preview">&hellip;</div>
+
+		
+		
+
+		
+		<br />
+		<p id="AjaxLogonErrors" class="error callout" style="display:none"></p>
+		
+
+<div id="LogOnContainer">
+
+<table class="member-signin" cellspacing="0">
+<tr>
+	<td id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_ExistHead" colspan="2"><h3>Existing Members</h3>
+		<div style="margin:-20px 0 10px" class="subdue">Sign in to your account</div>
+	</td>
+<td id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickSignHead" colspan="2"><h3 id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickTitle">...or Join us</h3>
+		<div style="margin:-20px 0 10px" class="subdue">Download, Vote, Comment, Publish.</div>
+	</td>
+
+</tr>
+
+<tr valign="top">
+
+	
+	<td>
+
+		<table>
+		<tr>
+			<td class="align-middle align-right nowrap">Your Email &nbsp;</td>
+			<td><input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$CurrentEmail" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_CurrentEmail" class="small-text" type="email" style="width:175px;" /></td>
+		</tr>
+		<tr>
+			<td class="align-middle align-right nowrap">Password &nbsp;</td>
+			<td><input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$CurrentPassword" type="password" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_CurrentPassword" class="small-text" style="width:175px;" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="align-middle align-right nowrap">
+				
+				<div><a id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_SendPassword" class="forgot small-text" href="https://www.codeproject.com/script/Membership/SendPassword.aspx?rp=/">Forgot your password?</a></div>
+			</td>
+		</tr>
+		</table>
+
+	</td>
+	<td width="70px">&nbsp;</td>
+
+	<td>
+
+		<table>
+		<tr>
+			<td class="align-middle align-right nowrap">Your Email &nbsp;</td>
+			<td class="align-right">
+				<input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$QuickEmail" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickEmail" class="small-text" type="email" style="width:175px;" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<div id="NewEmailError" class="locked invisible small-text" style="margin-top:-10px">This 
+				email is in use. Do you need your <a id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_Password2" href="https://www.codeproject.com/script/Membership/SendPassword.aspx?rp=/">password</a>?</div>
+				
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="align-middle align-right nowrap subdue">
+				Optional Password &nbsp;
+				<input name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$QuickPassword" type="password" id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickPassword" class="small-text" style="width:125px;" />
+                <div id="password-strength-quick" style="margin-top: -10px; padding-bottom: 10px;"></div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="align-right small-text">
+				
+			</td>
+		</tr>
+		</table>
+
+	</td>
+	<td width="70px">&nbsp;</td>
+	
+	
+</tr>
+
+
+
+</table>
+
+<div id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_Choices" style="margin-top:-10px;width:275px;margin-left:335px;" class="small-text subdue">
+    <input id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_TermsOfUse" type="checkbox" name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$TermsOfUse" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_TermsOfUse">I have read and agree to the <a target="_blank" href="/info/TermsOfUse.aspx">Terms of Service</a> and <a target="_blank" href="/info/privacy.aspx">Privacy Policy</a></label><br />
+    <span onchange="logonCtrlObject.OnNewslettersCheckChange(this);"><input id="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters" type="checkbox" name="ctl00$ctl00$MC$AMC$PostEntryObj$MemberLogOn$AllNewsletters" checked="checked" /><label for="ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters">Please subscribe me to the CodeProject newsletters</label></span>
+</div>
+
+</div>
+
+<script type="text/javascript">
+    function LogonCtrlObject()
+    {
+        var clickedOptin = false;
+
+        this.OnCountryChange = function (CASL, subscribing) {
+        }
+
+        this.OnNewslettersCheckChange = function (checkbox) {
+            clickedOptin = true;
+        }
+
+        this.OnCountrySelectionChange = function (dropdown) {
+            var CASLCountries = [ "Afghanistan","Ã…land Islands","Algeria","American Samoa","Andorra","Angola","Anguilla","Anonymous Proxy","Antarctica","Aruba","Asia/Pacific Region","Benin","Bermuda","Bolivia","Bonaire, Sint Eustatius and Saba","Bouvet Island","British Crown Dependencies","British Indian Ocean Territory","Brunei Darussalam","Burundi","Canada","Cape Verde","Chad","Christmas Island","Cocos (Keeling) Islands","Comoros","Congo","Congo (the Democratic Republic of the)","Cook Islands","Cote D'Ivoire","Cuba","CuraÃ§ao","Djibouti","East Timor","Egypt","El Salvador","Equatorial Guinea","Eritrea","Ethiopia","Europe","Falkland Islands (Malvinas)","Faroe Islands","Fiji","France (Metropolitan)","French Guiana","French Polynesia","French Southern Territories","Gabon","Gibraltar","Greenland","Guadeloupe","Guam","Guernsey","Guinea","Guinea-Bissau","Guyana","Haiti","Heard Island and Mcdonald Islands","Holy See (Vatican City State)","Honduras","Iran (Islamic Republic of)","Iraq","Isle of Man","Jersey","Kiribati","Korea (Democratic People'S Republic of)","Kuwait","Kyrgyzstan","Lao People'S Democratic Republic","Lebanon","Lesotho","Liberia","Libyan Arab Jamahiriya","Macau","Madagascar","Malawi","Maldives","Mali","Marshall Islands","Martinique","Mauritania","Mayotte","Mexico","Micronesia (Federated States of)","Monaco","Mongolia","Montserrat","N/a","Nauru","Netherlands Antilles","New Caledonia","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Northern Mariana Islands","Oman","Other","Palau","Palestinian Territory (Occupied)","Panama","Papua New Guinea","Paraguay","Pitcairn","Reunion","Rwanda","Saint BarthÃ©lemy","Saint Helena","Saint Kitts and Nevis","Saint Martin (French)","Saint Pierre and Miquelon","Samoa","San Marino","Sao Tome and Principe","Satellite Provider","Senegal","Serbia and Montenegro","Seychelles","Sint Maarten","Solomon Islands","Somalia","South Georgia and the South Sandwich Islands","Sudan","Suriname","Svalbard and Jan Mayen","Swaziland","Syrian Arab Republic","Taiwan","Tajikistan","Timor-Leste","Togo","Tokelau","Turkmenistan","Tuvalu","United States Minor Outlying Islands","Uruguay","Uzbekistan","Vanuatu","Wallis and Futuna","Western Sahara","Yemen","Yugoslavia","Zaire","Zimbabwe",];
+            if (dropdown.selectedIndex >= 0) {
+                var country = dropdown[dropdown.selectedIndex].text;
+
+                var useCASL = false;
+                for (i = 0; i < CASLCountries.length; i++) {
+                    if (CASLCountries[i] == country) {
+                        useCASL = true;
+                        break;
+                    }
+                }
+
+                if (!clickedOptin)
+                    $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters').prop('checked', !useCASL);
+
+                logonCtrlObject.OnCountryChange(useCASL, $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_AllNewsletters').prop('checked'));
+            }
+        }
+    }
+
+    var logonCtrlObject = new LogonCtrlObject();
+</script>
+
+
+		
+		<div class="clearfix padded-top">
+		
+		<div id="AjaxSubmitGroup" style="display:none">
+			<a href="javascript:void(0)" id="ctl00_ctl00_MC_AMC_PostEntryObj_AjaxSubmit" class="button-large safe" onclick="OnAjaxSubmit(); return false;">Submit your solution!</a>
+		</div>
+		</div>
+
+		
+		<div class="callout">
+	    	When answering a question please:<br />
+		    <ol class="spaced">
+			<li>Read the question carefully.</li>
+			<li>Understand that English isn't everyone's first language so be lenient of bad 
+			spelling and grammar.</li>
+			<li>If a question is poorly phrased then either ask for clarification, ignore it, or
+			<b>edit the question</b> and fix the problem. Insults are not welcome.</li>
+		    </ol>
+		    Let's work to help developers, not make them feel stupid.
+		</div>
+		
+
+	</div>
+	
+    
+	
+
+	
+    <div class="clearfix"></div>
+
+	
+</div>
+
+
+</div>
+<br style="clear:both" />
+</div>
+
+
+<div id="ctl00_ctl00_MC_AMC_LicenseTerms" class="small-text" style="margin-top:20px;"><p class="small-text">This content, along with any associated source code and files, is licensed under <a href="http://www.codeproject.com/info/cpol10.aspx" rel="license">The Code Project Open License (CPOL)</a></p></div>
+
+
+	<!-- Main Page Contents End -->
+
+	</div>
+
+</div>
+
+
+
+<div id="ctl00_ctl00_MC_NavRight" class="text-sidebar question">
+
+	
+
+<div class="align-right">
+    <div style="display:inline-block;position:relative;top:-5px">
+        
+    </div>
+    &nbsp;
+    
+    &nbsp;
+    <a id="ctl00_ctl00_MC_Tools_PrintLnk" title="Print" rel="nofollow" href="/Questions/226294/Draw-a-filled-Rectangle?display=Print"><img 
+	    src="https://codeproject.global.ssl.fastly.net/images/print24.png" width="24px" height="24px" 
+	    style="border:0" alt="Print"></a>
+
+     
+
+    <a id="ctl00_ctl00_MC_Tools_AnswersRSS" title="Quick Answers RSS feed" href="/webservices/QuestionRSS.aspx">
+        <img src="https://codeproject.global.ssl.fastly.net/images/rss24.png" alt="Answers RSS" style="width:24px;height:24px;border:0pt none;" />
+        </a>
+
+    
+
+</div>
+
+	
+
+	
+    
+
+	
+
+	<div class="padded-top" style="height:250px">
+		<div class="msg-300x250" data-format="300x250" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros"  data-tags='VC6, C++, OpenGL'><noscript><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=300x250&c=533398"><img src="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=300x250&c=533398"  width="300px" height="250px" target="_blank"/></a></noscript></div>
+	</div>
+
+	
+
+	<table class="experts-list padded-top">
+		<tr><td colspan="2" class="header">Top Experts</td></tr>
+		<tr class="subheader"><td width="50%">Last 24hrs</td><td width="50%">This month</td></tr>
+		<tr>
+			<td>
+
+<div class="">
+
+
+
+<table class="experts-list">
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=1315955">Graeme_Grant</a></td>
+<td align="right" class="points"><span title="Points earned in period">344</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=6600045">Karthik Bangalore</a></td>
+<td align="right" class="points"><span title="Points earned in period">200</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=6122202">OriginalGriff</a></td>
+<td align="right" class="points"><span title="Points earned in period">145</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=635858">Maciej Los</a></td>
+<td align="right" class="points"><span title="Points earned in period">135</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=283762">Dave Kreskowiak</a></td>
+<td align="right" class="points"><span title="Points earned in period">118</span></td>
+</tr>
+</table>
+</div></td>
+			<td>
+
+<div class="">
+
+
+
+<table class="experts-list">
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=6122202">OriginalGriff</a></td>
+<td align="right" class="points"><span title="Points earned in period">3,723</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=4593231">Peter Leow</a></td>
+<td align="right" class="points"><span title="Points earned in period">2,771</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=4072603">ppolymorphe</a></td>
+<td align="right" class="points"><span title="Points earned in period">2,008</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=6600045">Karthik Bangalore</a></td>
+<td align="right" class="points"><span title="Points earned in period">1,900</span></td>
+</tr>
+
+<tr>
+
+<td class="name"><a id="MemberName" href="/script/Membership/View.aspx?mid=767687">Richard MacCutchan</a></td>
+<td align="right" class="points"><span title="Points earned in period">1,409</span></td>
+</tr>
+</table>
+</div></td>
+		</tr>
+	</table>
+
+	<div id="ctl00_ctl00_MC_Related" class="padded-top also-read">
+		<script type="text/javascript">document.write(unescape('%0d%0a    %3cdiv id%3d%22ctl00_ctl00_MC_RelatedAds_RelatedResults_ctl00_header%22 class%3d%22header%22%3eAlso Read%3c%2fdiv%3e%0d%0a    %3cdiv class%3d%22content-list%22 style%3d%22margin-top%3a15px%22%3e%0d%0a%0d%0a    %3cdiv class%3d%22content-list-item clearfix%22%3e%0d%0a        %3cdiv class%3d%22thumbnail%22%3e%3ca id%3d%22ctl00_ctl00_MC_RelatedAds_RelatedResults_ctl01_Thumbnail%22 href%3d%22https%3a%2f%2fwww.codeproject.com%2fResearchLibrary%2f169%2fIncrease-System-Availability-by-Leveraging-Apache%22%3e%3cimg src%3d%22https%3a%2f%2fwww.codeproject.com%2fscript%2fResearchLibrary%2fLogos%2fLibraryItemThumbnail_169_100x130.png%22 alt%3d%22%22 style%3d%22border-width%3a0px%3b%22 %2f%3e%3c%2fa%3e%3c%2fdiv%3e%0d%0a        %3cdiv class%3d%22text%22%3e%0d%0a            %3cdiv class%3d%22title%22%3e%3ca id%3d%22ctl00_ctl00_MC_RelatedAds_RelatedResults_ctl01_Title%22 href%3d%22https%3a%2f%2fwww.codeproject.com%2fResearchLibrary%2f169%2fIncrease-System-Availability-by-Leveraging-Apache%22%3eIncrease System Availability by Leveraging Apache Tomcat Clustering%3c%2fa%3e%3c%2fdiv%3e%0d%0a            %0d%0a        %3c%2fdiv%3e%0d%0a    %3c%2fdiv%3e%0d%0a%0d%0a    %3cdiv class%3d%22content-list-item clearfix%22%3e%0d%0a        %3cdiv class%3d%22thumbnail%22%3e%3ca id%3d%22ctl00_ctl00_MC_RelatedAds_RelatedResults_ctl02_Thumbnail%22 href%3d%22https%3a%2f%2fwww.codeproject.com%2fResearchLibrary%2f254%2fGetting-the-Most-out-of-Your-Infrastructure-Dev-an%22%3e%3cimg src%3d%22https%3a%2f%2fwww.codeproject.com%2fscript%2fResearchLibrary%2fLogos%2fLibraryItemThumbnail_254_100x119.png%22 alt%3d%22%22 style%3d%22border-width%3a0px%3b%22 %2f%3e%3c%2fa%3e%3c%2fdiv%3e%0d%0a        %3cdiv class%3d%22text%22%3e%0d%0a            %3cdiv class%3d%22title%22%3e%3ca id%3d%22ctl00_ctl00_MC_RelatedAds_RelatedResults_ctl02_Title%22 href%3d%22https%3a%2f%2fwww.codeproject.com%2fResearchLibrary%2f254%2fGetting-the-Most-out-of-Your-Infrastructure-Dev-an%22%3eGetting the Most out of Your Infrastructure%3a Dev and Test Best Practices%3c%2fa%3e%3c%2fdiv%3e%0d%0a            %0d%0a        %3c%2fdiv%3e%0d%0a    %3c%2fdiv%3e%0d%0a%0d%0a    %3c%2fdiv%3e%0d%0a'));</script>
+	</div>
+
+	
+		
+	<div style="margin:auto;width:160px;margin-top:10px" class="sticky-stop">
+		
+	</div>
+
+	<div class="padded-top related">
+		
+	<div id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl00_header" class="header">Related Questions</div>
+	<div class="content-list">	
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl02_Link" href="//www.codeproject.com/Questions/127522/draw-rectangle-and-fill-color-in-that-rectangle-on">draw rectangle and fill color in that rectangle on the tablelayoutpanel</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl03_Link" href="//www.codeproject.com/Questions/64657/how-to-draw-a-filled-circle-in-opengl">how to draw a filled circle in opengl</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl04_Link" href="//www.codeproject.com/Questions/438314/VB-NET-and-OpenGL-Drawing">VB.NET and OpenGL Drawing</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl05_Link" href="//www.codeproject.com/Questions/136131/Drawing-a-Rectangle-Using-User-Input">Drawing a Rectangle Using User Input</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl06_Link" href="//www.codeproject.com/Questions/162616/Drawing-a-rectangle-on-a-rectangle-with-GDI">Drawing a rectangle on a rectangle with GDI</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl07_Link" href="//www.codeproject.com/Questions/232650/Rectangle-Rotation-using-opengl">Rectangle Rotation using opengl</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl08_Link" href="//www.codeproject.com/Questions/459789/Drawing-a-tekst-exactly-fitting-in-a-rectangle">Drawing a tekst exactly fitting in a rectangle</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl09_Link" href="//www.codeproject.com/Questions/999825/how-draw-rectangle-in-open-cv">how draw rectangle in open cv</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl10_Link" href="//www.codeproject.com/Questions/788368/How-fill-rectangle-in-image-with-csharp">How draw and fill rectangle in image with c#</a>
+		
+	</div>
+	
+	<div class="content-list-item">
+		<a id="ctl00_ctl00_MC_RelatedEntries_RelatedResults_ctl11_Link" href="//www.codeproject.com/Questions/764119/Drawing-the-rectangle-on-multi-monitors">Drawing the rectangle on multi-monitors</a>
+		
+	</div>
+	
+	</div>
+	
+
+	</div>
+
+</div>
+
+
+</div>
+<br />
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1"));
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1 = document.all ? document.all["ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1"] : document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1");
+ctl00_ctl00_MC_AMC_PostEntryObj_ValidationSummary1.validationGroup = "ItemDetails";
+var ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal = document.all ? document.all["ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal"] : document.getElementById("ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal");
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.errormessage = "The content must be at least 30 characters.";
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.display = "Dynamic";
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.validationGroup = "ItemDetails";
+ctl00_ctl00_MC_AMC_PostEntryObj_ContentVal.evaluationfunction = "CustomValidatorEvaluateIsValid";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+
+
+					
+
+					<!-- Main Page Contents End -->
+					<br clear="all" />
+				</div>
+
+				<div class="theme1-background padded-top padded-bottom sticky-stop">
+					<div class="bottom-promo"> 
+						<div class="msg-728x90" data-format="728x90" data-type="ad" data-publisher="lqm.codeproject.site" data-zone="ros"  data-loadOnView='true'  data-tags='VC6, C++, OpenGL,pos_bottom'><noscript><a href="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=533398"><img src="https://pubads.g.doubleclick.net/gampad/jump?iu=/6839/lqm.codeproject.site/ros&sz=728x90&c=533398"  width="728px" height="90px" target="_blank"/></a></noscript></div>
+					</div>
+				</div>
+
+				<div class="extended tiny-text">
+					<div class="row">
+						<div class="float-left">
+							<a id="ctl00_ctl00_AdvertiseLink" href="http://developermedia.com/">Advertise</a> | 
+							<a id="ctl00_ctl00_PrivacyLink" href="/info/privacy.aspx">Privacy</a> |
+							<a id="ctl00_ctl00_Mobile">Mobile</a>
+							<br />
+							Web02 |
+							2.8.170215.1 |
+							Last Updated 16 Jun 2013
+						</div>
+						<div class="float-right align-right">
+							Copyright &copy; <a href="mailto:webmaster@codeproject.com">CodeProject</a>, 1999-2017 <br />
+							All Rights Reserved.
+							<a id="ctl00_ctl00_TermsOfUseLink" href="/info/TermsOfUse.aspx">Terms of Service</a>
+						</div>
+
+						
+
+
+<div class="page-width">
+Layout: <a id="ctl00_ctl00_PageWidth_FixedT" title="Fixed width layout" rel="nofollow" class=" active" href="/Questions/226294/Draw-a-filled-Rectangle?PageFlow=FixedWidth">fixed</a>
+|
+<a id="ctl00_ctl00_PageWidth_FluidT" title="Fluid layout" rel="nofollow" href="/Questions/226294/Draw-a-filled-Rectangle?PageFlow=Fluid">fluid</a>
+</div>
+
+
+					</div>
+				</div>
+	
+				<br clear="all" />
+		
+					
+
+			
+
+	</div>
+	</div>
+	</div>
+
+	<div id="ctl00_ctl00_Address" class="tiny-text subdue align-center padded-top">
+	CodeProject, 
+	503-250 Ferrand Drive Toronto Ontario, M3C 3G8 Canada
+	+1 416-849-8900 x 100
+	</div>
+
+</div>
+<div id="page-bottom"></div>
+
+
+
+<script type="text/javascript" language="Javascript" src="https://codeproject.global.ssl.fastly.net/script/Content/JS/editor.min.js?dt=2.8.170215.1"></script>
+<script type="text/javascript" language="Javascript" src="https://codeproject.global.ssl.fastly.net/script/Answers/JS/qa.min.js?dt=2.8.170215.1"></script>
+<script type="text/javascript" language="Javascript" src="https://www.google.com/recaptcha/api.js"></script>
+<script type="text/javascript" language="Javascript" src="https://codeproject.global.ssl.fastly.net/script/JS/TextAreaResizer.min.js?dt=2.8.170215.1"></script>
+<script type="text/javascript" language="Javascript" src="/script/JS/PasswordStrength.min.js"></script>
+<script type="text/javascript" language="Javascript">//<![CDATA[
+$('#NewEntryGroup').show();
+$('#ctl00_ctl00_MC_AMC_AddChild2').hide();
+$('#ctl00_ctl00_MC_AMC_AddChild1').attr('href', '#NewEntryGroup');
+$('#ctl00_ctl00_MC_AMC_AddChild1').attr('name', 'anchorTarget');
+$(document).ready(function() { anchorAnimate() });
+
+$(document).ready(function () { processCodeBlocks.Initialise('#contentdiv', 400, true); });
+function UpdateSize(elmName, indicator) {
+ var elm = document.getElementById(elmName);
+ if (elm) {
+  var indElm = document.getElementById(indicator);
+  if (indElm) indElm.value = elm.value.length.toString();
+ }
+}
+
+
+                    function OnEdit() { 
+                        $('#Preview').html('');
+                        $('#AjaxSubmitErrors').hide();
+                        $('#AjaxLogonErrors').hide();
+                    }
+                    $('#TitleSize').prop('disabled', true);
+                    var validationData = {};
+                    validationData.postErrorDivId   = 'AjaxSubmitErrors';
+                    validationData.logonErrorDivId  = 'AjaxLogonErrors';
+                    validationData.generalErrorMsg  = 'An error occurred and we were unable to complete your request. The error has been logged and an administrator notified. Sorry :(';
+                    validationData.minContentLength = 30;
+                    validationData.tooShortMsg      = 'Please provide more content.';
+
+                    var newEntryData = {};
+                    newEntryData.postUrl          = '/script/Answers/WebServices/ProcessNewEntry.aspx';
+                    newEntryData.typeName         = 'answer';
+                    newEntryData.parentId         = 226294;
+                    newEntryData.parentTypeName   = 'answer';
+                    newEntryData.containerId      = 'PostEntryContainer';
+                    newEntryData.contentId        = 'ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText';
+                    newEntryData.whatHaveYouTriedId = 'ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText';
+                    newEntryData.submitBtnId      = 'AjaxSubmit';
+                    newEntryData.helpTipsId       = 'ctl00_ctl00_MC_AMC_PostEntryObj_HelpTips';
+                    newEntryData.useWysiwygEditor = false;
+                    newEntryData.ignoreHtmlId     = 'ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml';
+                    newEntryData.onPasteMode      = 'html';
+                    newEntryData.getEditorObject  = function(){ return editor_ctl00_ctl00_MC_AMC_PostEntryObj_Content; };
+
+                    var logonData = {};
+                    logonData.loggedIn    = false;
+                    logonData.postUrl     = 'https://www.codeproject.com/script/Membership/Ajax/ProcessLogonOrSignup.aspx';
+                    logonData.containerId = 'LogOnContainer';
+
+                    function OnAjaxSubmit() {
+                        TryPostNewEntry(validationData, newEntryData, logonData);
+                    }
+
+                    $(document).ready(function() {
+                        if (document.all || window.getSelection) {
+        			        $('#quote-button').show();
+                        }
+                    })
+if (RegisterPreviewRefresh)RegisterPreviewRefresh(1000, 'ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText', 'ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText',false, 'ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml', '/script/Articles/WebServices/ArticleServices.aspx/UpdateEditLockStatus', 0);var lastPreviewContent='';function RefreshPreview(previewHelper) {var ignore=$('#ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml')[0];
+var formatType=ignore.checked?'Text':'TextWithHtml';
+
+                        var htmlContent = GetEditorContent(false, 'ctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageText', 'ctl00_ctl00_MC_AMC_PostEntryObj_WhatHaveYouTried_MessageText');
+                        if (lastPreviewContent != htmlContent) {
+                            lastPreviewContent = htmlContent;
+                            postData = {
+                                'ParentId'         : newEntryData.parentId,
+                                'Content'          : htmlContent,
+                                'WysiwygEditorUsed': newEntryData.useWysiwygEditor,
+                                'IgnoreHtml'       : $('#' + newEntryData.ignoreHtmlId)[0].checked,
+                                'PasteMode'        : newEntryData.onPasteMode 
+                            };
+                            $.ajax({
+                                type:     'POST',
+                                cache:    false,
+                                dataType: 'json',
+                                data:      postData,
+                                timeout:   1000,
+                                async:     true,
+                                url:       '/script/Answers/Preview.aspx',
+                                success: function(data) {
+                                    if (!data || !data.html || data.html == '')
+                                        result = '<p class="error">Unexpected error when attempting to retrieve preview HTML.</p>';
+                                    else 
+                                        result = decodeURIComponent(data.html);
+
+                                    $('#Preview').html(result);
+                                },
+                                error: function (xhr, textStatus, errorThrown) {
+                                    errorThrown;
+                                }
+                            });
+                        }
+                        else if (htmlContent.length == 0) {
+                            $('#Preview').html('&hellip;');
+                        }
+                    }
+$('#ctl00_ctl00_MC_AMC_PostEntryObj_PostbackSubmitGroup').hide();
+                              $('#AjaxSubmitGroup').show();
+$(function ()
+                {
+                    $('.oauth').click(function () {
+                        $this = $(this);
+                        href = $this.attr('href');
+                        var myWindow = window.open(href, 'popup',
+                                    'width=800,height=600,location=0,menubar=0,resizeable=0,scrollbars=0,toolbar=0');
+                        myWindow.focus();
+                        var timer = setInterval(function () {
+                                        if (myWindow.closed) {
+                                            clearInterval(timer);
+                                            // window.location.reload(); // May do a POST reload, shows a warning
+                                            window.location = window.location; // force a GET reload
+                                        }
+                                    }, 200);
+                        return false;
+                    });
+                });
+var oSrchFlt = false, oSrchBox=false,srchBoxFoc=false;
+$(document).ready(function() {
+ if(InitWatermark)InitWatermark('sb_tb', 'Search for articles, questions, tips');
+ var sbar = $('#sb_tb'); 
+ var sfilter = $('#SearchFilter');
+ if (sbar && sfilter) {
+  sfilter.removeClass('popup'); sfilter.hide(); sfilter.removeClass('open');
+  sbar.blur(function() {
+ if (!oSrchFlt) {sfilter.hide(); sfilter.removeClass('open');}
+ srchBoxFoc=false;
+ });
+  sbar.focus(function() {
+ oSrchFlt=false; srchBoxFoc=true;
+ sfilter.show(); sfilter.addClass('open');
+ });
+  sbar.mouseleave(function() { oSrchBox=false; });
+  sbar.mouseover(function() { oSrchBox=true; });
+  sfilter.mouseleave(function() { oSrchFlt=false; if (!srchBoxFoc&&!oSrchBox) { sfilter.hide(); sfilter.removeClass('open'); }});
+  sfilter.mouseover(function() { oSrchFlt=true; });
+ }
+});
+$('#usf').change(function() {$('#usfc').val('true');});
+$('#clear-rate_ctl00_ctl00_MC_AMC_RatePost_RSU').click(function () {    $('#ctl00_ctl00_MC_AMC_RatePost_RSU').hide(); return false;});$("#ctl00_ctl00_MC_AMC_RatePost_RateItemWrapper")   .removeClass("container-rating")   .hover( function() { $('#ctl00_ctl00_MC_AMC_RatePost_RSU').fadeIn('fast'); },            function() { $('#ctl00_ctl00_MC_AMC_RatePost_RSU').fadeOut('fast'); } );
+function PostBack_ctl00_ctl00_MC_AMC_RatePost_RateItemWrapper() {
+  return rateItem(226294,2,4,false,true,0,'MediumStars');
+}
+
+                        function getVotesHistogram(objectId, objectTypeId, containerId, loadingId) {
+                            if (!$('#' + containerId).attr('alreadyRequested')){
+                                $.ajax({
+                                    url: '/script/Ratings/Ajax/Histogram.aspx?obid=' + objectId + '&obtid='+objectTypeId,
+                                    success: function (data) {
+                                        $('#' + containerId).html(data);
+                                        $('#' + loadingId).hide();
+                                    }
+                                });
+                                $('#' + containerId).attr('alreadyRequested', 'true');
+                            }
+                        }
+$(document).ready(function() {   new starRating('#ctl00_ctl00_MC_AMC_RatePost_VoteFormDiv', PostBack_ctl00_ctl00_MC_AMC_RatePost_RateItemWrapper,'ctl00_ctl00_MC_AMC_RatePost');
+  $('#ctl00_ctl00_MC_AMC_RatePost_RB').mouseenter(function() {     getVotesHistogram(226294,2   ,'ctl00_ctl00_MC_AMC_RatePost_Histogram','ctl00_ctl00_MC_AMC_RatePost_Loading');  })})
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_RatePost_SubmitRateBtn').hide(); });
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_RatePost_SubmitRateBtn').hide(); });function ChkRtctl00_ctl00_MC_AMC_RatePost(){}
+
+$('#clear-rate_ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RSU').click(function () {    $('#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RSU').hide(); return false;});$("#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RateItemWrapper")   .removeClass("container-rating")   .hover( function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RSU').fadeIn('fast'); },            function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RSU').fadeOut('fast'); } );
+function PostBack_ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RateItemWrapper() {
+  return rateItem(226299,2,5,false,true,0,'SmallStars');
+}
+$(document).ready(function() {   new starRating('#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_VoteFormDiv', PostBack_ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RateItemWrapper,'ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost');
+  $('#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_RB').mouseenter(function() {     getVotesHistogram(226299,2   ,'ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_Histogram','ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_Loading');  })})
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_SubmitRateBtn').hide(); });
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost_SubmitRateBtn').hide(); });function ChkRtctl00_ctl00_MC_AMC_Answers_ctl00_A_RatePost(){}
+
+var reportingMemberId = 0;
+$('#clear-rate_ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RSU').click(function () {    $('#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RSU').hide(); return false;});$("#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RateItemWrapper")   .removeClass("container-rating")   .hover( function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RSU').fadeIn('fast'); },            function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RSU').fadeOut('fast'); } );
+function PostBack_ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RateItemWrapper() {
+  return rateItem(226437,2,5,false,true,0,'SmallStars');
+}
+$(document).ready(function() {   new starRating('#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_VoteFormDiv', PostBack_ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RateItemWrapper,'ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost');
+  $('#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_RB').mouseenter(function() {     getVotesHistogram(226437,2   ,'ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_Histogram','ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_Loading');  })})
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_SubmitRateBtn').hide(); });
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost_SubmitRateBtn').hide(); });function ChkRtctl00_ctl00_MC_AMC_Answers_ctl01_A_RatePost(){}
+
+var reportingMemberId = 0;
+$('#clear-rate_ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RSU').click(function () {    $('#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RSU').hide(); return false;});$("#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RateItemWrapper")   .removeClass("container-rating")   .hover( function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RSU').fadeIn('fast'); },            function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RSU').fadeOut('fast'); } );
+function PostBack_ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RateItemWrapper() {
+  return rateItem(607389,2,5,false,true,0,'SmallStars');
+}
+$(document).ready(function() {   new starRating('#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_VoteFormDiv', PostBack_ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RateItemWrapper,'ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost');
+  $('#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_RB').mouseenter(function() {     getVotesHistogram(607389,2   ,'ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_Histogram','ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_Loading');  })})
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_SubmitRateBtn').hide(); });
+$(document).ready(function() { $('#ctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost_SubmitRateBtn').hide(); });function ChkRtctl00_ctl00_MC_AMC_Answers_ctl02_A_RatePost(){}
+
+var reportingMemberId = 0;
+var editorctl00_ctl00_MC_AMC_PostEntryObj_Content_MessageTextConfig = {
+                    PasteDialogId:          'ctl00_ctl00_MC_AMC_PostEntryObj_Content_pasteDialog',
+                    ShowPastePreviewWindow:  false,
+                    PastePreviewOverEditor:  true,
+                    LongMsgWarning:          true,
+                    LocalLinksWarning:       true,
+                    IgnoreHtmlId:           'ctl00_ctl00_MC_AMC_PostEntryObj_IgnoreHtml',
+                    AllowMarkdownId:        '',
+                    QuoteableElmId:         '',
+                    PasteSettingElmId:      'ctl00_ctl00_MC_AMC_PostEntryObj_Content_OnPasteSetting', 
+                    InitialPasteMode:       'html',
+                    EnsureContentValidation: true,
+                    OnSubmit:                null,
+                    SniffCodeUrl:            '/script/content/ajax/SniffCode.aspx',
+                    SniffCodeParameter:      'text',
+                    SanitiseHtmlUrl:         '/script/Forums/Preview.aspx',
+
+                    GetTitlePaths: [
+                        {
+                            'path'  : 'https://www.codeproject.com/kb',
+                            'url'   : '/script/articles/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+
+                        {
+                            'path'  : 'https://www.codeproject.com/articles',
+                            'url'   : '/script/articles/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+                        {
+                            'path'  : 'https://www.codeproject.com/articles',
+                            'url'   : '/script/articles/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+                        {
+                            'path'  : 'https://www.codeproject.com/tips',
+                            'url'   : '/script/articles/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+                        {
+                            'path'  : 'https://www.codeproject.com/reference',
+                            'url'   : '/script/articles/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+
+                        {
+                            'path'  : 'https://www.codeproject.com/questions',
+                            'url'   : '/script/answers/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+                        {
+                            'path'  : 'https://www.codeproject.com/answers',
+                            'url'   : '/script/answers/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+
+                        {
+                            'path'  : 'https://www.codeproject.com/answers',
+                            'url'   : '/script/answers/ajax/GetTitle.aspx',
+                            'param' : 'aurl'
+                        },
+
+                        // Default - MUST be last option here.
+                        {
+                            'path'  : null,
+                            'url'   : '/script/content/ajax/GetTitle.aspx',
+                            'param' : 'rp'
+                        }
+                    ]
+                };
+$(document).ready(function() {$('textarea.resizable:not(.processed)').TextAreaResizer(false);});
+$(function() {
+                                    var lasttime=new Date().getTime();
+                                    $('#NewEmailError').hide();
+                                    var emailEle = $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickEmail');
+                                    emailEle.blur(function() {
+                                        var email = $.trim(emailEle.val());
+                                        if (email.length > 0)
+                                            checkEmail(email);
+                                    });
+                                    emailEle.keyup(function() {
+                                        var email = $.trim(emailEle.val());
+                                        var current=new Date().getTime();
+                                        if (email.length > 0 && (current-lasttime) > 1000) {
+                                            checkEmail(email);
+                                            lasttime=current;
+                                        }
+                                    });
+                                });
+                                function checkEmail(email) {
+                                    $.post('/script/Membership/Ajax/EmailExists.aspx?meml=' + escape(email),
+                                          function(data) {
+                                            if (data.toLowerCase() == 'true')
+                                                $('#NewEmailError').show();
+                                            else
+                                                $('#NewEmailError').hide();
+                                        });
+                                }
+$(document).ready(function() {
+  $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_QuickPassword').passStrengthify({
+      minimum:    8,
+      element:    $('#password-strength-quick'),
+      rawEntropy: false,
+      labels: {
+        tooShort:         'Too short',
+        passwordStrength: 'Strength'
+      }
+  });
+  $('#ctl00_ctl00_MC_AMC_PostEntryObj_MemberLogOn_ProPassword').passStrengthify({
+      minimum:    8,
+      element:    $('#password-strength-pro'),
+      rawEntropy: false,
+      labels: {
+        tooShort:         'Too short',
+        passwordStrength: 'Strength'
+      }
+  });
+});
+
+//]]>
+</script>
+
+
+</body>
+</html>
+_Úm…’      XªòXXªò–=uµü       E:https://www.codeproject.com/Questions/226294/Draw-a-filled-Rectangle necko:classified 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+x-frame-options: SAMEORIGIN
+x-content-type-options: nosniff
+Date: Mon, 20 Feb 2017 13:42:50 GMT
+Content-Length: 148909
+Forwarded-Proto: https
+ charset UTF-8 uncompressed-len 0  E­

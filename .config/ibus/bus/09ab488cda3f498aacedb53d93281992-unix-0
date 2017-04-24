@@ -1,0 +1,3 @@
+# This file is created by ibus-daemon, please do not modify it
+IBUS_ADDRESS=unix:abstract=/tmp/dbus-okiIOjrw,guid=7abe7be9b560039d9ed535ff58fdfba5
+IBUS_DAEMON_PID=955
